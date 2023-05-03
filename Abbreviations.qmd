@@ -1,0 +1,19 @@
+# Abbreviations {#sec-abbreviations}
+
+-   **CVS** Child Victim Survey
+
+-   **FCBS** Finnish Crime against Businesses Survey
+
+-   **FCVS** Finnish Crime Victim Survey
+
+-   **FHM** Finnish homicide monitor
+
+-   **FRA** European Union Agency for Fundamental Rights
+
+-   **FSRD** Finnish Self-Report Delinquency Study
+
+-   **ICVS** International Crime Victim Surveys
+
+-   **HBSC** Health Behaviour in School Aged Children
+
+-   **SOCM** Statistics on Offences and Coercive Measures

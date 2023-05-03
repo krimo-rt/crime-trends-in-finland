@@ -1,0 +1,84 @@
+# Youth crime
+
+```{r, include=FALSE}
+library(gapminder)
+library(flexdashboard)
+library(foreign)
+library(haven)
+library(dplyr)
+library(rio)
+library(tidyverse)
+library(dplyr)
+library(writexl)
+library(lubridate)
+library(compare)
+library(arsenal)
+library(diffdf)
+library(plotly)
+library(stats)
+library(tibble)
+#library(VarDef)
+library(gtools)
+library(data.table)
+library(plyr)
+library(readxl)
+library(plotly)
+library(janitor)
+library(hrbrthemes)
+library(bslib)
+library(kableExtra)
+library(gt)
+
+```
+
+The Finnish criminal justice system uses three age categories of youth, with repercussions on how offenders are punished or treated. Persons under 15 years of age are not criminally culpable. In such cases, the social services deal with the matter. However, the crime is entered to the police information system (and therefore to the SOCM). Age categories 15 to 17 and 18 to 20 have special stipulations reducing penal severity. To match this logic, we used the same age categories in crime trend description.
+
+During the last 10 years, theft offences by young people have decreased. Property destruction decreased in the first half of the decade in the 15 to 20 age groups, remaining stable after that. This crime type was stable in the youngest age group. Violence (assault offences) increased in the youngest group and decreased in the category 18 to 20. The middle category 15 to 17 showed a nonlinear trend: first a decrease, and after 2018, a moderate increase in police-recorded assaults. The increase in the group of less than 15 year-olds was stable and relatively drastic: the number of offences per 10 000 population increased from 11 in 2012 to 25 in 2021.
+
+The Finnish Self-Report Delinquency Study is a nationally representative crime survey among 15--16 year-olds (@kaakinen2021). Following the logic of this report, it is of some interest to compare the FSRD survey-based findings with the police-recorded crime trends in the age category 15 to 17. These comparisons are shown in Figure 5. Note that the police-recorded offending figure is offence-based while the survey observations are person-based. Also, the vertical scales differ it is a percentage for the survey and rate per 1,000 persons for the administrative statistic. Overall, the two sources largely agree on the direction of change in the three offence categories examined: a clear decrease in the first part of the observation decade was followed by a more stable phase. The administrative crime statistics and the self-reports-based survey source thus cross-validate one another in the domain of youth crime.
+
+Based on police recorded offences, the crime trends have been quite similar in the 18 to 20 and 15 to 17 age groups (decrease and levelling out). In the younger group, the trends are different and show increase of recorded violence.
+
+```{r, echo=FALSE, warning=FALSE}
+
+figure1_y7 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure7")
+
+fig22_y7 <- plot_ly(figure1_y7, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
+
+fig22_y7 <- fig22_y7 %>% add_trace(y = ~`Last year prevalence, % (FSRD)`, name = "Last year prevalence, % (FSRD)", mode = 'markers') 
+
+fig22_y7
+
+```
+
+**Figure 7** Theft offences by young persons: comparison of police recorded offences (15--17-year-olds) (SOCM) and self-reported prevalence rates (15--16-year-olds). Finland 2012--2021 (FSRD).\
+
+```{r, echo=FALSE, warning=FALSE}
+
+figure1_y8 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure7")
+
+
+fig22_y8 <- plot_ly(figure1_y8, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
+
+fig22_y8 <- fig22_y8 %>% add_trace(y = ~`Last year prevalence, % (FSRD)`, name = "Last year prevalence, % (FSRD)", mode = 'markers') 
+
+fig22_y8
+
+```
+
+**Figure 8** Property destruction offences by young persons: comparison of police recorded offences (15--17-year-olds) (SOCM) and self-reported prevalence rates (15--16-year-olds). Finland 2012--2021 (FSRD).
+
+```{r, echo=FALSE, warning=FALSE}
+
+figure1_y9 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure9")
+
+
+fig22_y9 <- plot_ly(figure1_y9, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
+
+fig22_y9 <- fig22_y9 %>% add_trace(y = ~`Last year prevalence, % (FSRD)`, name = "Last year prevalence, % (FSRD)", mode = 'markers') 
+
+fig22_y9
+
+```
+
+**Figure 9** Assault offences by young persons: comparison of police recorded offences (15--17-year-olds) (SOCM) and self-reported prevalence rates (15--16-year-olds). Finland 2012--2021 (FSRD).

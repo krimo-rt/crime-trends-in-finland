@@ -1,0 +1,29 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Crime trends in Finland"
+  author: "Janne Kivivuori, Ilari Kolttola, Anna Raeste, Karoliina Suonpää, Matti Näsi, Tiina Malin, Markus Kaakinen and Teemu Vauhkonen"
+  date: "12/19/2022"
+  chapters:
+    - index.qmd
+    - Crime indicators.qmd
+    - crime trends.qmd
+    - youth crime.qmd
+    - alcohol.qmd
+    - international comparisons.qmd
+    - Abbreviations.qmd
+    - references.qmd
+sharing: [twitter]
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
