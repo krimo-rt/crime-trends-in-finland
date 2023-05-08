@@ -6,6 +6,8 @@ book:
   title: "Crime trends in Finland"
   author: "Janne Kivivuori, Ilari Kolttola, Anna Raeste, Karoliina Suonpää, Matti Näsi, Tiina Malin, Markus Kaakinen and Teemu Vauhkonen"
   date: "12/19/2022"
+  site-url: https://krimo-rt.github.io/crime-trends-in-finland/
+  sharing: [twitter]
   chapters:
     - index.qmd
     - Crime indicators.qmd
@@ -15,8 +17,6 @@ book:
     - international comparisons.qmd
     - Abbreviations.qmd
     - references.qmd
-sharing: [twitter]
-
 bibliography: references.bib
 
 format:
