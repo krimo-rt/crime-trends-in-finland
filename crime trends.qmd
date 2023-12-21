@@ -4,7 +4,7 @@
 
 Homicide includes five legal crime labels: murder, manslaughter, manslaughter under mitigating circumstances, infanticide, and causing of death in the context of an assault offence. In Finnish penal law, the last mentioned category refers to incidents in which the violence was intentional, while the result of death was not. Together, these crime rubrics correspond to the definition of homicide used in the European Homicide Monitor standard [@granath2012], capturing lethal and intentional interpersonal violence.
 
-In the last ten years, the number of these offences has varied between 116 and 74. In 2021, the homicide rate in Finland was 1.69 per 100 000 population.
+In the last ten years, the number of these offences has varied between 116 and 74. In 2022, the homicide rate in Finland was 1.49 per 100 000 population.
 
 ```{r, include=FALSE}
 library(gapminder)
@@ -36,17 +36,12 @@ library(kableExtra)
 library(gt)
 
 
-table1 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx", sheet="table1")
+table1 <- read_excel("C:/Users/beuker/Downloads/crime_trends.xlsx", sheet="Sheet1")
 
 #knitr::kable(table1)
 ```
 
 **Table 1** Homicide offences reported to the police, Finland 2012--2021 (SOCM.)
-
-|                          | 2012 | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Homicides                | 107  | 107  | 112  | 116  | 96   | 74   | 95   | 83   | 95   | 94   |
-| Homicide per 100,000 pop | 1.97 | 1.96 | 2.05 | 2.11 | 1.74 | 1.34 | 1.72 | 1.5  | 1.72 | 1.69 |
 
 Figure 1 shows the homicide trend based on cause-of-death statistics from 1955, using 5-year periods, with the year 2020 also given. The trend shows a high homicide rate period from 1970 to the beginning of the 1990s, after which a consistent homicide drop took place. The most recent observation year suggests an end to the drop among male victims. Note that infanticide, defined as including victims less than one year old, has not been included in Figure 1.
 
@@ -96,7 +91,7 @@ ggplotly(fig22_h) %>% layout(legend = list(orientation = "h", xanchor = "center"
 
 ```
 
-Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s [@lehti2014] . During the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased. Finnish homicide trends have been extensively analysed from long duration change [@lehti2020] to analyses of the 1970s homicide boom \[@kivivuori2003\] and the post-1990s homicide drop in Finland \[@lehti2014\] and in the European context [@suonpää2022] .
+Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s [@lehti2014] . During the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased. Finnish homicide trends have been extensively analysed from long duration change [@lehti2020] to analyses of the 1970s homicide boom [@kivivuori2003] and the post-1990s homicide drop in Finland [@lehti2014] and in the European context [@suonpää2022] .
 
 ## Assault
 
