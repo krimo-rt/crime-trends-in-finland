@@ -22,8 +22,6 @@
 
 -   International comparisons of violence in European and Nordic adult populations suggest that Finland has above-average problems related to both lethal and other violence. According to EU-wide comparisons, Finland has a high rate of both partner and non-partner violence against women.
 
--   In international youth crime surveys, Finnish youths do not emerge as particularly highly victimised by assaults/violence. In the ISRD-3 survey wave conducted in 2012--13, Finnish youths showed a high robbery victimisation prevalence.
-
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(foreign)
