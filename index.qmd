@@ -2,11 +2,11 @@
 
 ***You can find the PDF version from the original publication Rikollisuustilanne 2021 [Crime trends in Finland](https://helda.helsinki.fi/bitstream/handle/10138/352005/Katsauksia_52_Rikollisuustilanne_2021_2022.pdf#page=196)***
 
--   In Finland, homicide decreased from the early 1990s until recently; the drop may have levelled out or reversed in 2020--21.
+-   In Finland, homicide decreased from the early 1990s until recently; the drop may have levelled out or reversed in 2020--22.
 
--   Finnish homicide remains dominated by marginalised men with alcohol dependence and drinking group conflicts.
+-   Finnish homicide remains dominated by marginalised male alcoholics and drinking group conflicts.
 
--   Assault offences remained stable in 2012--2021, a trend corroborated by victim surveys. Rape offences increased during the decade, also corroborated by victim surveys.
+-   Assault offences remained stable in 2013--2022, a trend corroborated by victim surveys. Rape offences increased during the decade, also corroborated by victim surveys.
 
 -   The numbers of child sexual abuse offences reported to the police have varied annually but increased in recent years in both crimes reported to the police and victim surveys.
 
@@ -18,9 +18,9 @@
 
 -   In the 15--17 age group, violence, theft and property destruction decreased in the early part of the decade, levelling out after that. In the 18--20 age group the trends of violence, theft and property destruction were similar to the 15--17-year-olds.
 
--   In Finland, youths under 15 years of age are not criminally culpable. However, their offences are recorded in administrative crime statistics. In this age category, the recorded assault offence rate doubled from 2012 to 2021. It is not known whether this reflects increasing violence, increasing attention to child behaviour problems, or both.
+-   In Finland, youths under 15 years of age are not criminally culpable. However, their offences are recorded in administrative crime statistics. In this age category, the recorded assault offence rate doubled from 2013 to 2022. While reporting propensity may have increased, available research suggests that the trend may also capture real increase of aggression. Patterns such as use of sharp instruments and offenders taking videos of the crime have increased.
 
--   International comparisons of violence in European and Nordic adult populations suggest that Finland has above-average problems related to both lethal and other violence.
+-   International comparisons of violence in European and Nordic adult populations suggest that Finland has above-average problems related to both lethal and other violence. According to EU-wide comparisons, Finland has a high rate of both partner and non-partner violence against women.
 
 -   In international youth crime surveys, Finnish youths do not emerge as particularly highly victimised by assaults/violence. In the ISRD-3 survey wave conducted in 2012--13, Finnish youths showed a high robbery victimisation prevalence.
 
@@ -51,8 +51,8 @@ library(bslib)
 
 ```
 
-Unless otherwise mentioned, the trends in this report refer to the decade 2012--2021. This report emphasises findings on homicide, and findings cross-validated by administrative statistics and KRIMO crime surveys.
+Unless otherwise mentioned, the trends in this report refer to the decade 2012--2022. This report emphasises findings on homicide, and findings cross-validated by administrative statistics and KRIMO crime surveys.
 
 # Finland
 
-Situated in northern Europe, Finland has a population of 5.5 million (2021). In terms of socio-political institutions, Finland belongs to a group of Nordic welfare states with Sweden, Denmark, Norway and Iceland. It has a compulsory and free-of-charge school system, connecting all youths to educational institutions up to the age of 18. With 49,000 US dollars as average annual income, the country ranks 16th among 38 OECD countries (OECD Data). Regarding the criminal justice system, Finland represents a culture of penal moderation, with policy emphasis on prevention and rehabilitation. The Finnish prisoner rate of 43 per 100,000 population rate is one of the lowest in Europe [@aebi2021] and the world.
+Situated in northern Europe, Finland has a population of 5.5 million (2022). In terms of socio-political institutions, Finland belongs to a group of Nordic welfare states with Sweden, Denmark, Norway and Iceland. It has a compulsory and free-of-charge school system, connecting all youths to educational institutions up to the age of 18. With 49,000 US dollars as average annual income, the country ranks 16th among 38 OECD countries (OECD Data). Regarding the criminal justice system, Finland represents a culture of penal moderation, with policy emphasis on prevention and rehabilitation. The Finnish prisoner rate of 43 per 100,000 population rate is one of the lowest in Europe [@aebi2021] and the world.
