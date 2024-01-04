@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -56,7 +56,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -67,11 +68,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -79,65 +85,74 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Crime trends in Finland</a> 
         <div class="sidebar-tools-main">
-    <a href="https://twitter.com/intent/tweet?url=|url|" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=|url|" rel="" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Crime trends in Finland</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crime trends in Finland</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></a>
+  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./crime trends.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></a>
+  <a href="./crime trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./youth crime.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></a>
+  <a href="./youth crime.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./alcohol.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></a>
+  <a href="./alcohol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></a>
+  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></a>
+  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -147,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></h1>
 </div>
 
 
@@ -166,123 +181,117 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-aaltonen2012" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aaltonen2012" class="csl-entry" role="listitem">
 Aaltonen, M., J. Kivivuori, P. Martikainen, and R. Sirén. 2012.
 <span>“Socioeconomic Differences in Violent Victimization: Exploring the
 Impact of Data Source and the Inclusivity of the Violence
 Concept.”</span> <em>European Journal of Criminology</em> 9 (6): 567583.
 </div>
-<div id="ref-aebi2021" class="csl-entry" role="doc-biblioentry">
-Aebi, Marcelo, Edoardo Cocco, Lorena Molnar, and Mélanie M. Tiago. 2021.
-<em>Prison populations. SPACE I - 2021 <span></span> Council of Europe
-Annual Penal Statistics: Prison populations</em>. Lausanne: Council of
-Europe.
-</div>
-<div id="ref-aromaa2006" class="csl-entry" role="doc-biblioentry">
+<div id="ref-aromaa2006" class="csl-entry" role="listitem">
 Aromaa, Kauko, and Markku Heiskanen. 2006. <span>“Kansainvälinen
 rikosuhritutkimus vaikeuksissa.”</span> <em>Haaste</em> 3 (6): 1617.
 </div>
-<div id="ref-dijk2007" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dijk2007" class="csl-entry" role="listitem">
 Dijk, Jan van, Kesteren, John, and Paul Smit. 2007. <span>“Criminal
 Victimisation in international Perspective.”</span> In. Haage:
 Wetenschappelijk Onderzoeken.
 </div>
-<div id="ref-enzmann2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-enzmann2018" class="csl-entry" role="listitem">
 Enzmann, D., J. Kivivuori, I. Haen Marshall, M. Steketee, M. Hough, and
 M. Killias. 2018. <em>A Glo-Bal Perspective on Young People as Offenders
 and Victims. First Results from the ISRD3 Study</em>. Switzerland:
 Springer Briefs in Criminology.
 </div>
-<div id="ref-f.r.a.2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-f.r.a.2014" class="csl-entry" role="listitem">
 F. R. A. 2014. <em>Violence Against Women: An EU-Wide Survey. Main
 Results</em>. Wien, European Union Agency for Fundamental Rights.
 </div>
-<div id="ref-f.r.a.2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-f.r.a.2021" class="csl-entry" role="listitem">
 ———. 2021. <em>Crime, Safety and Victim<span>’</span>s Rights. European
 Union Fundamental Rights Agency</em>. Luxembourg: Publications Office of
 the European Union.
 </div>
-<div id="ref-fagerlund2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fagerlund2014" class="csl-entry" role="listitem">
 Fagerlund, M., M. Peltola, J. Kääriäinen, N. Ellonen, and H. Sariola.
 2014. <span>“Lasten ja nuorten väkivaltakokemukset 2013.”</span> In.
 Tampere: Poliisiammattikorkeakoulu.
 </div>
-<div id="ref-finnish2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-finnish2019" class="csl-entry" role="listitem">
 <span>“Finnish Institute of Health and Welfare.”</span> 2019. In.
 Helsinki: Finnish Institute of Health; Welfare.
 </div>
-<div id="ref-granath2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-granath2012" class="csl-entry" role="listitem">
 Granath, Sven. 2012. <span>“Homicide in Sweden.”</span> In, 405–19.
 </div>
-<div id="ref-holmberg2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-holmberg2022" class="csl-entry" role="listitem">
 Holmberg, Stina. 2022. <span>“Det sexuella våldet I et jämforande
 perspektiv.”</span> In, edited by Amir Rostami and Jerzy Sarnecki. Lund:
 Studentlitteratur.
 </div>
-<div id="ref-inchley2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-inchley2020" class="csl-entry" role="listitem">
 Inchley, Joanna C., Gonneke W. J. M. Stevens, Oddrun Samdal, and Dorothy
 B. Currie. 2020. <span>“Enhancing Understanding of Adolescent Health and
 Well-Being: The Health Behaviour in School-Aged Children Study.”</span>
 <em>Journal of Adolescent Health</em> 66 (6): S3–5. <a href="https://doi.org/10.1016/j.jadohealth.2020.03.014">https://doi.org/10.1016/j.jadohealth.2020.03.014</a>.
 </div>
-<div id="ref-kaakinen2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kaakinen2021" class="csl-entry" role="listitem">
 Kaakinen, Markus, and Matti Näsi. 2021. <em>Nuorten rikoskäyttäytyminen
 ja uhrikokemukset 2020. Kriminologian ja oikeuspolitiikan instituutti,
 katsauksia 47/2021</em>. Helsinki: Helsingin yliopisto.
 </div>
-<div id="ref-kivivuori2003" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2003" class="csl-entry" role="listitem">
 Kivivuori, J. 2003. <span>“Sudden Increase of Homicide in Early 1970s
 Finland.”</span> <em>Journal of Scandinavian Studies in Criminology and
 Crime Prevention</em> 3 (1): 621.
 </div>
-<div id="ref-kivivuori2011" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2011" class="csl-entry" role="listitem">
 ———. 2011. <em>Discovery of Hidden Crime. Self-Report Surveys in
 Criminal Policy Context</em>. Oxford: Oxford University Press.
 </div>
-<div id="ref-kivivuori2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2014" class="csl-entry" role="listitem">
 Kivivuori, J., V. Salmi, M. Aaltonen, and H. Elonheimo. 2014.
 <em>Kansainvälisen nuorisorikollisuuskyselyn (ISRD-3) mittaukset
 Suomessa 2013. Okeuspoliittisen tutkimuslaitoksen verkkokatsauksia
 35/2014</em>. Helsinki: Oikeuspoliittinen tutkimuslaitos.
 </div>
-<div id="ref-kivivuori2013" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2013" class="csl-entry" role="listitem">
 Kivivuori, J., V. Salmi, and S. Walser. 2013. <span>“Supervision Mode
 Effects in Computerized Delin-Quency Surveys at School: Finnish
 Replication of a Swiss Experiment.”</span> <em>Journal of Experimental
 Criminology</em> 9 (1): 91107.
 </div>
-<div id="ref-kivivuori2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2012" class="csl-entry" role="listitem">
 Kivivuori, J., R. Sirén, and P. Danielsson. 2012. <span>“Gender Framing
 Effects in Victim Surveys.”</span> <em>Eu-Ropean Journal of
 Criminology</em> 9 (2): 142158.
 </div>
-<div id="ref-lehti2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lehti2014" class="csl-entry" role="listitem">
 Lehti, M. 2014. <span>“Homicide Drop in Finland,
 1996<span></span>2012.”</span> <em>Journal of Scandinavian Studies in
 Criminology and Crime Prevention</em> 15 (2): 182199,. <a href="https://doi.org/10.1080/14043858.2014.963931">https://doi.org/10.1080/14043858.2014.963931</a>.
 </div>
-<div id="ref-lehti2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lehti2019" class="csl-entry" role="listitem">
 ———. 2019. <em>Henkirikoskatsaus</em>. Helsinki: Helsingin yliopisto.
 </div>
-<div id="ref-lehti2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lehti2020" class="csl-entry" role="listitem">
 Lehti, M., and R. Sirén. 2020. <span>“The Impact of Alcohol Consumption
 on Homicide: A Time-Series Analysis of Three Nordic Countries.”</span>
 <em>European Journal of Criminology</em> 17 (3): 352369. <a href="https://doi.org/10.1177/1477370818802524">https://doi.org/10.1177/1477370818802524</a>.
 </div>
-<div id="ref-näsi2016" class="csl-entry" role="doc-biblioentry">
+<div id="ref-näsi2016" class="csl-entry" role="listitem">
 Näsi, Matti. 2016. <em>Nuorten rikoskäyttäytyminen ja uhrikokemukset
 2016. Kriminologian ja oikeuspolitiikan instituutin katsauksia
 18/2016</em>. Helsinki: Helsingin yliopisto.
 </div>
-<div id="ref-saarikkomäki2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-saarikkomäki2019" class="csl-entry" role="listitem">
 Saarikkomäki, Elsa, Martti Lehti, and Janne Kivivuori. 2019.
 <em>Vähittäiskauppaan Ja Majoitus- Ja Ravintola-Alaan Kohdistuvat
 Rikokset: Toinen Kansallinen Yritysuhritutkimus 2018</em>. Katsauksia.
 Helsinki: Helsingin yliopisto, kriminologian ja oikeuspolitiikan
 instituutti.
 </div>
-<div id="ref-suonpää2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-suonpää2022" class="csl-entry" role="listitem">
 Suonpää, K., J. Kivivuori, P. Aarten, A. Ahven, S. Granath, N.
 Markwalder, S. Skott, A. H. Thomsen, S. Walser, and M. Liem. 2022.
 <span>“Homicide Drop in Seven European Countries: General or Specific
@@ -317,9 +326,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -384,6 +407,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
