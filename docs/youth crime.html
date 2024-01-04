@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,10 +76,11 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
 <script src="site_libs/plotly-binding-4.10.1/plotly.js"></script>
 <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
@@ -95,11 +96,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./youth crime.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -107,65 +113,74 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Crime trends in Finland</a> 
         <div class="sidebar-tools-main">
-    <a href="https://twitter.com/intent/tweet?url=|url|" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=|url|" rel="" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Crime trends in Finland</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crime trends in Finland</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></a>
+  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./crime trends.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></a>
+  <a href="./crime trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./youth crime.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></a>
+  <a href="./youth crime.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./alcohol.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></a>
+  <a href="./alcohol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></a>
+  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></a>
+  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -175,7 +190,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></h1>
 </div>
 
 
@@ -192,34 +207,34 @@ div.csl-indent {
 
 <p>The Finnish criminal justice system uses three age categories of youth, with repercussions on how offenders are punished or treated. Persons under 15 years of age are not criminally culpable. In such cases, the social services deal with the matter. However, the crime is entered to the police information system (and therefore to the SOCM). Age categories 15 to 17 and 18 to 20 have special stipulations reducing penal severity. To match this logic, we used the same age categories in crime trend description.</p>
 <p>During the last 10 years, theft offences by young people have decreased. Property destruction decreased in the first half of the decade in the 15 to 20 age groups, remaining stable after that. This crime type was stable in the youngest age group. Violence (assault offences) increased in the youngest group and decreased in the category 18 to 20. The middle category 15 to 17 showed a nonlinear trend: first a decrease, and after 2018, a moderate increase in police-recorded assaults. The increase in the group of less than 15 year-olds was stable and relatively drastic: the number of offences per 10 000 population increased from 11 in 2012 to 25 in 2021.</p>
-<p>The Finnish Self-Report Delinquency Study is a nationally representative crime survey among 15–16 year-olds (<span class="citation" data-cites="kaakinen2021">Kaakinen and Näsi (<a href="references.html#ref-kaakinen2021" role="doc-biblioref">2021</a>)</span>). Following the logic of this report, it is of some interest to compare the FSRD survey-based findings with the police-recorded crime trends in the age category 15 to 17. These comparisons are shown in Figure 5. Note that the police-recorded offending figure is offence-based while the survey observations are person-based. Also, the vertical scales differ it is a percentage for the survey and rate per 1,000 persons for the administrative statistic. Overall, the two sources largely agree on the direction of change in the three offence categories examined: a clear decrease in the first part of the observation decade was followed by a more stable phase. The administrative crime statistics and the self-reports-based survey source thus cross-validate one another in the domain of youth crime.</p>
+<p>The Finnish Self-Report Delinquency Study is a nationally representative crime survey among 15–16 year-olds (<span class="citation" data-cites="kaakinen2021">Kaakinen and Näsi (<a href="#ref-kaakinen2021" role="doc-biblioref">2021</a>)</span>). Following the logic of this report, it is of some interest to compare the FSRD survey-based findings with the police-recorded crime trends in the age category 15 to 17. These comparisons are shown in Figure 5. Note that the police-recorded offending figure is offence-based while the survey observations are person-based. Also, the vertical scales differ it is a percentage for the survey and rate per 1,000 persons for the administrative statistic. Overall, the two sources largely agree on the direction of change in the three offence categories examined: a clear decrease in the first part of the observation decade was followed by a more stable phase. The administrative crime statistics and the self-reports-based survey source thus cross-validate one another in the domain of youth crime.</p>
 <p>Based on police recorded offences, the crime trends have been quite similar in the 18 to 20 and 15 to 17 age groups (decrease and levelling out). In the younger group, the trends are different and show increase of recorded violence.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3ed40b96c1f41d0ece12" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-3ed40b96c1f41d0ece12">{"x":{"visdat":{"659412a6428":["function () ","plotlyVisDat"]},"cur_data":"659412a6428","attrs":{"659412a6428":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"659412a6428.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[24.13,24.53,22.51,19.33,18.19,15.01,13.52,13.91,15.17,13.22],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[24,15,16],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e6f3a114c3f75487700f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-e6f3a114c3f75487700f">{"x":{"visdat":{"351ce3e6311":["function () ","plotlyVisDat"]},"cur_data":"351ce3e6311","attrs":{"351ce3e6311":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"351ce3e6311.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[24.13,24.53,22.51,19.33,18.19,15.01,13.52,13.91,15.17,13.22],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[24,15,16],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 7</strong> Theft offences by young persons: comparison of police recorded offences (15–17-year-olds) (SOCM) and self-reported prevalence rates (15–16-year-olds). Finland 2012–2021 (FSRD).<br>
 </p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-dabd0f1a76237931092b" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-dabd0f1a76237931092b">{"x":{"visdat":{"6594567649d8":["function () ","plotlyVisDat"]},"cur_data":"6594567649d8","attrs":{"6594567649d8":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"6594567649d8.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[24.13,24.53,22.51,19.33,18.19,15.01,13.52,13.91,15.17,13.22],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[24,15,16],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-cdc44adb6fcc50f0b73d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-cdc44adb6fcc50f0b73d">{"x":{"visdat":{"351c48cc1d1e":["function () ","plotlyVisDat"]},"cur_data":"351c48cc1d1e","attrs":{"351c48cc1d1e":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"351c48cc1d1e.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[24.13,24.53,22.51,19.33,18.19,15.01,13.52,13.91,15.17,13.22],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[24,15,16],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 8</strong> Property destruction offences by young persons: comparison of police recorded offences (15–17-year-olds) (SOCM) and self-reported prevalence rates (15–16-year-olds). Finland 2012–2021 (FSRD).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-bdc350b9c26ed0f44d04" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-bdc350b9c26ed0f44d04">{"x":{"visdat":{"659439c1419c":["function () ","plotlyVisDat"]},"cur_data":"659439c1419c","attrs":{"659439c1419c":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"659439c1419c.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[11.42,10.23,8.91,8.32,7.47,7.94,7.48,7.62,8.27,8.95],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[13,8,8],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-356a46963575f162225c" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-356a46963575f162225c">{"x":{"visdat":{"351c7cd07a02":["function () ","plotlyVisDat"]},"cur_data":"351c7cd07a02","attrs":{"351c7cd07a02":{"x":{},"y":{},"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"351c7cd07a02.1":{"x":{},"y":{},"mode":"markers","name":"Last year prevalence, % (FSRD)","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[11.42,10.23,8.91,8.32,7.47,7.94,7.48,7.62,8.27,8.95],"mode":"lines","name":"Reported offences per 1000 pop (SOCM)","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[2012,2016,2020],"y":[13,8,8],"mode":"markers","name":"Last year prevalence, % (FSRD)","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 9</strong> Assault offences by young persons: comparison of police recorded offences (15–17-year-olds) (SOCM) and self-reported prevalence rates (15–16-year-olds). Finland 2012–2021 (FSRD).</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-kaakinen2021" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-kaakinen2021" class="csl-entry" role="listitem">
 Kaakinen, Markus, and Matti Näsi. 2021. <em>Nuorten rikoskäyttäytyminen ja uhrikokemukset 2020. Kriminologian ja oikeuspolitiikan instituutti, katsauksia 47/2021</em>. Helsinki: Helsingin yliopisto.
 </div>
 </div>
@@ -252,9 +267,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -319,6 +348,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
