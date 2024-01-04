@@ -100,7 +100,7 @@ Finnish homicide is still characterised by a high proportion of incidents involv
 
 ## Assault
 
-Assaults include three crime rubrics: assault, aggravated assault and petty assault. The recorded number of these offences was 38,231 in 2012, and 34,123 in 2021. The number of reported offences has been stable since 2014, with approximately 6 offences per 1000 population. Numbers and rates were slightly higher in the first two years of the series (Table 2).
+Assaults include three crime rubrics: assault, aggravated assault and petty assault. The recorded number of these offences was 35,515 in 2013, and 38,160 in 2022. The number of reported offences was stable from 2014 to 2021, with approximately 6 offences per 1000 population. Last year the number was close to 7 offences per 1000 population (Table 2).
 
 **Table 2** Assault offences reported to the police, Finland 2013-2022 (SOCM.)
 
@@ -109,7 +109,7 @@ Assaults include three crime rubrics: assault, aggravated assault and petty assa
 | Assault offences         | 35,515 | 32,928 | 33,661 | 33,769 | 33,535 | 33,639 | 33,849 | 33,285 | 34,123 | 34,123 |
 | Assaults per 100,000 pop | 6,51   | 6.02   | 6.13   | 6.14   | 6.08   | 6.10   | 6.13   | 6.01   | 6.15   | 6.90   |
 
-National victim surveys largely corroborate this stable trend. Assault victimisation has been very stable over the 10-year period.\
+National victim surveys largely corroborate the stable trend from 2013 to 2021 (Figure 2). Assault victimisation has been very stable over the 10-year period.\
 
 ```{r, echo=FALSE}
 
@@ -146,7 +146,9 @@ The year 2020 shows a violence dip (Figure 2). The temporary decrease could prob
 
 ## Sexual violence
 
-Sexual violence here comprises rape offences (rape and aggravated rape, including attempts) and child sexual abuse (CSA; child sexual abuse and aggravated child sexual abuse, including attempts) The number of rape offences reported to the police has increased in the past 10 years (Table 3). In 2021 the number increased by more than a quarter (28%) from the previous year. In the longer-term, the rise can partly be explained by legislative changes and victim awareness.
+Sexual violence here comprises rape offences (rape and aggravated rape, including attempts) and child sexual abuse (CSA; child sexual abuse and aggravated child sexual abuse, including attempts). It is noteworthy to mention that the law on sexual offences was reformed in the beginning of 2023. Due to the reform, sexual crimes have been under public discussion, which may have increased victim awareness or propensity to report crimes.
+
+The number of rape offences reported to the police has increased in the past 10 years (Table 3). In 2022 the number was lower than in 2021, when the number had increased by more than a quarter from the previous year. In the longer-term, the number has been rising. This can partly be explained by legislative changes and victim awareness.
 
 **Table 3** Rape offences reported to the police, Finland 2013-2022 (SOCM)
 
@@ -187,16 +189,16 @@ ggplotly(fig22_r) %>% layout(legend = list(orientation = "h", xanchor = "center"
 
 **Figure 3** Reported rape offences per 10 000 persons (SOCM) and percentage of sexual violence victims among 15--74-year-olds (FCVS), Finland 2012-2021.
 
-In the past ten years, the number of child sexual abuse offences reported to the police has varied annually as the number is dependent on crime series and the way they have been recorded (Table 4). In the last few years, the number has been growing and in 2021, 2089 cases of child sexual abuse were reported to the police. Some of the increase can be explained by changes in law and reporting propensities but the increase in recent years cannot fully be explained by these changes.
+In the past ten years, the number of child sexual abuse offences reported to the police has varied annually as the number is dependent on crime series and the way they have been recorded (Table 4). In the last few years, the number has been growing and in 2022, 2,380 cases of child sexual abuse were reported to the police. Some of the increase can be explained by changes in law and reporting propensities but the increase in recent years cannot fully be explained by these changes.
 
-**Table 4** Rape offences reported to the police, Finland 2012-2021 (SOCM)
+**Table 4** Rape offences reported to the police, Finland 2013-2022 (SOCM)
 
-|                                          | 2012  | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  |
+|                                          | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  | 2022  |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Child sexual abuse offences              | 1,542 | 1,634 | 1,389 | 1,217 | 1,218 | 1,168 | 1,373 | 1,709 | 1,770 | 2,089 |
-| Child sexual abuse offences per 10,000 p | 2.84  | 3     | 2.54  | 2.22  | 2.21  | 2.12  | 2.49  | 3.09  | 3.2   | 3.77  |
+| Child sexual abuse offences              | 1,634 | 1,389 | 1,217 | 1,218 | 1,168 | 1,373 | 1,709 | 1,770 | 2,089 | 2,380 |
+| Child sexual abuse offences per 10,000 p | 3     | 2.54  | 2.22  | 2.21  | 2.12  | 2.49  | 3.09  | 3.2   | 3.77  | 4.28  |
 
-The Finnish child victim survey (conducted in the years 1988, 2008 and 2013) and School Health Promotion Study (comparable question in 2019) asked ninth graders (age approx. 15) about their sexual experiences with persons at least 5 years older than them. Figure 4 examines trends in self-reported crime in relation to the crimes reported to the police. Note the different measurement units. The initial trend suggests a decreasing trend with increasing official control attention. The latest trends in both data resources have been increasing. Publication of a new measurement is expected soon.
+The Finnish child victim survey (conducted in the years 1988, 2008, 2013 and 2022) and School Health Promotion Study (SHPS, comparable question in 2019) asked ninth graders (age approx. 15) about their sexual experiences with persons at least 5 years older than them. Figure 4 examines trends in self-reported crime in relation to the crimes reported to the police. Note the different measurement units. The latest trends in both data resources have been increasing. The increase in the results of child victim survey between the years 2013 and 2022 is not statistically significant (Mielityinen et al. 2023).
 
 ```{r, echo=FALSE, warning=FALSE}
 
@@ -224,12 +226,12 @@ fig22_s2
 
 ## Theft
 
-Theft offences include petty theft, theft, and aggravated theft. The number of thefts reported to the police has remained relatively stable in absolute terms and per population. In 2020, the year of COVID-19 lockdowns, the number of reported theft offences were above average. Within the general theft category, aggravated theft decreased from 3,248 in 2012 to 2,147 in 2021.
+Theft offences include petty theft, theft, and aggravated theft. The number of thefts reported to the police has remained relatively stable in absolute terms and per population. In 2020, the year of COVID-19 lockdowns, the number of reported theft offences were above average. Within the general theft category, aggravated theft decreased from 3,054 in 2013 to 2,177 in 2022.
 
-|                                       | 2012    | 2013    | 2014    | 2015    | 2016    | 2017    | 2018   | 2019    | 2020    | 2021    |
+|                                       | 2013    | 2014    | 2015    | 2016    | 2017    | 2018   | 2019    | 2020    | 2021    | 2022    |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Reported theft offences               | 138,750 | 141,395 | 143,141 | 138,571 | 131,432 | 125,431 | 122741 | 126,906 | 139,121 | 127,791 |
-| Reported theft offences per 1,000 pop | 25.6    | 25.9    | 26.2    | 25.3    | 23.9    | 22.8    | 22.2   | 23      | 25.1    | 23      |
+| Reported theft offences               | 141,395 | 143,141 | 138,571 | 131,432 | 125,431 | 122741 | 126,906 | 139,121 | 127,791 | 128,250 |
+| Reported theft offences per 1,000 pop | 25.9    | 26.2    | 25.3    | 23.9    | 22.8    | 22.2   | 23      | 25.1    | 23      | 23,1    |
 
 The Finnish Crime Victim Survey captures the percentage of persons whose personal property was stolen outside the home (Figure 5). This type of victimisation decreased during the last decade. The same decreasing trend can also be seen in vehicle theft, as captured by the FCVS.
 
@@ -295,12 +297,12 @@ It should be noted that theft offences reported to the police include crimes aga
 
 ## Economic crime
 
-Economic crime covers in this instance tax offences, accounting offences and bankruptcy offences. The number of police-recorded economic crimes has decreased considerably from 2019, which marked the highest total numbers of economic crimes in ten years. In 2021, police registered 2,440 tax offences, accounting offences and bankruptcy offences. This means the number of economic offences decreased by 18 per cent from the previous year and 28 per cent from 2019.
+Economic crime covers in this instance tax offences, accounting offences and bankruptcy offences. The number of police-recorded economic crimes has decreased considerably from 2019, which marked the highest total numbers of economic crimes in ten years. In 2022, police registered 2,822 tax offences, accounting offences and bankruptcy offences. This means the number of economic offences decreased by 16 per cent from the previous year.
 
-|                                      | 2012  | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  |
+|                                      | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  | 2022  |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Economic offences                    | 2,243 | 2,281 | 2,666 | 2,685 | 2,954 | 3,129 | 3,159 | 3,383 | 2,983 | 2,440 |
-| Economic offences per 10 000 persons | 4.13  | 4.18  | 4.87  | 4.89  | 5.37  | 5.68  | 5.72  | 6.12  | 5.39  | 4.40  |
+| Economic offences                    | 2,281 | 2,666 | 2,685 | 2,954 | 3,129 | 3,159 | 3,383 | 2,983 | 2,440 | 2,822 |
+| Economic offences per 10 000 persons | 4.18  | 4.87  | 4.89  | 5.37  | 5.68  | 5.72  | 6.12  | 5.39  | 4.40  | 5,07  |
 
 Before the decrease in reported economic offences, the number of offences had risen continuously since 2010. The decrease from the peak of 2019 has mostly been due to the decrease of tax offences, just as the increase in 2010--2019 was due to the rising numbers of tax offences. Accounting of-fences and bankruptcy offences have remained fairly stable. The observed decrease in tax offences has likely been caused by the changing emphasis in resource allocation within the field of investigation of economic offences and risk-based tax audits.
 
