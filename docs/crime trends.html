@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,10 +76,11 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
 <script src="site_libs/plotly-binding-4.10.1/plotly.js"></script>
 <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
@@ -95,11 +96,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./crime trends.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -107,76 +113,85 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Crime trends in Finland</a> 
         <div class="sidebar-tools-main">
-    <a href="https://twitter.com/intent/tweet?url=|url|" title="Twitter" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=|url|" rel="" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Crime trends in Finland</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Crime trends in Finland</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></a>
+  <a href="./Crime indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./crime trends.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></a>
+  <a href="./crime trends.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./youth crime.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></a>
+  <a href="./youth crime.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Youth crime</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./alcohol.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></a>
+  <a href="./alcohol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></a>
+  <a href="./international comparisons.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">International comparisons</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></a>
+  <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#homicide" id="toc-homicide" class="nav-link active" data-scroll-target="#homicide"><span class="toc-section-number">2.1</span>  Homicide</a></li>
-  <li><a href="#assault" id="toc-assault" class="nav-link" data-scroll-target="#assault"><span class="toc-section-number">2.2</span>  Assault</a></li>
-  <li><a href="#sexual-violence" id="toc-sexual-violence" class="nav-link" data-scroll-target="#sexual-violence"><span class="toc-section-number">2.3</span>  Sexual violence</a></li>
-  <li><a href="#theft" id="toc-theft" class="nav-link" data-scroll-target="#theft"><span class="toc-section-number">2.4</span>  Theft</a></li>
-  <li><a href="#economic-crime" id="toc-economic-crime" class="nav-link" data-scroll-target="#economic-crime"><span class="toc-section-number">2.5</span>  Economic crime</a></li>
+  <li><a href="#homicide" id="toc-homicide" class="nav-link active" data-scroll-target="#homicide"><span class="header-section-number">2.1</span> Homicide</a></li>
+  <li><a href="#assault" id="toc-assault" class="nav-link" data-scroll-target="#assault"><span class="header-section-number">2.2</span> Assault</a></li>
+  <li><a href="#sexual-violence" id="toc-sexual-violence" class="nav-link" data-scroll-target="#sexual-violence"><span class="header-section-number">2.3</span> Sexual violence</a></li>
+  <li><a href="#theft" id="toc-theft" class="nav-link" data-scroll-target="#theft"><span class="header-section-number">2.4</span> Theft</a></li>
+  <li><a href="#economic-crime" id="toc-economic-crime" class="nav-link" data-scroll-target="#economic-crime"><span class="header-section-number">2.5</span> Economic crime</a></li>
   </ul>
 </nav>
     </div>
@@ -185,7 +200,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Crime trends</span></h1>
 </div>
 
 
@@ -203,26 +218,25 @@ div.csl-indent {
 <section id="homicide" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="homicide"><span class="header-section-number">2.1</span> Homicide</h2>
 <p>Homicide includes five legal crime labels: murder, manslaughter, manslaughter under mitigating circumstances, infanticide, and causing of death in the context of an assault offence. In Finnish penal law, the last mentioned category refers to incidents in which the violence was intentional, while the result of death was not. Together, these crime rubrics correspond to the definition of homicide used in the European Homicide Monitor standard <span class="citation" data-cites="granath2012">(<a href="references.html#ref-granath2012" role="doc-biblioref">Granath 2012</a>)</span>, capturing lethal and intentional interpersonal violence.</p>
-<p>In the last ten years, the number of these offences has varied between 116 and 74. In 2021, the homicide rate in Finland was 1.69 per 100 000 population.</p>
-<p><strong>Table 1</strong> Homicide offences reported to the police, Finland 2012–2021 (SOCM.)</p>
+<p>In the last ten years, the number of these offences has varied between 116 and 74. In 2022, the homicide rate in Finland was 1.49 per 100 000 population.</p>
+<p><strong>Table 1</strong> Homicide offences reported to the police, Finland 2013–2022 (SOCM.)</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
 <th></th>
-<th>2012</th>
 <th>2013</th>
 <th>2014</th>
 <th>2015</th>
@@ -232,12 +246,12 @@ div.csl-indent {
 <th>2019</th>
 <th>2020</th>
 <th>2021</th>
+<th>2022</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Homicides</td>
-<td>107</td>
 <td>107</td>
 <td>112</td>
 <td>116</td>
@@ -247,37 +261,32 @@ div.csl-indent {
 <td>83</td>
 <td>95</td>
 <td>94</td>
+<td>83</td>
 </tr>
 <tr class="even">
 <td>Homicide per 100,000 pop</td>
-<td>1.97</td>
 <td>1.96</td>
 <td>2.05</td>
 <td>2.11</td>
 <td>1.74</td>
 <td>1.34</td>
 <td>1.72</td>
-<td>1.5</td>
+<td>1.50</td>
 <td>1.72</td>
 <td>1.69</td>
+<td>1.49</td>
 </tr>
 </tbody>
 </table>
 <p>Figure 1 shows the homicide trend based on cause-of-death statistics from 1955, using 5-year periods, with the year 2020 also given. The trend shows a high homicide rate period from 1970 to the beginning of the 1990s, after which a consistent homicide drop took place. The most recent observation year suggests an end to the drop among male victims. Note that infanticide, defined as including victims less than one year old, has not been included in Figure 1.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c6e8dbe4eb55a10a95e5" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-c6e8dbe4eb55a10a95e5">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[1.1,1.3,1.1,1.31381310250648,1.44649234698095,1.68615991832501,1.64518573352156,1.8719712090828,1.54120692757945,1.44978051385687,1.25593175446265,0.996237664508323,0.713999017211986,0.6],"text":["years: 1955-59<br />rate: 1.1000000","years: 1960-64<br />rate: 1.3000000","years: 1965-69<br />rate: 1.1000000","years: 1970-74<br />rate: 1.3138131","years: 1975-79<br />rate: 1.4464923","years: 1980-84<br />rate: 1.6861599","years: 1985-89<br />rate: 1.6451857","years: 1990-94<br />rate: 1.8719712","years: 1995-99<br />rate: 1.5412069","years: 2000-04<br />rate: 1.4497805","years: 2005-09<br />rate: 1.2559318","years: 2010-14<br />rate: 0.9962377","years: 2015-19<br />rate: 0.7139990","years: 2020<br />rate: 0.6000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Female","legendgroup":"Female","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[3.2,3.3,3.1,3.8967407011319,4.74951399293499,4.19191704854396,4.23261217522744,4.70605796806618,4.21332636385657,3.66386276521181,2.99093070364059,2.20064360478171,1.70228646839463,2.1],"text":["years: 1955-59<br />rate: 3.2000000","years: 1960-64<br />rate: 3.3000000","years: 1965-69<br />rate: 3.1000000","years: 1970-74<br />rate: 3.8967407","years: 1975-79<br />rate: 4.7495140","years: 1980-84<br />rate: 4.1919170","years: 1985-89<br />rate: 4.2326122","years: 1990-94<br />rate: 4.7060580","years: 1995-99<br />rate: 4.2133264","years: 2000-04<br />rate: 3.6638628","years: 2005-09<br />rate: 2.9909307","years: 2010-14<br />rate: 2.2006436","years: 2015-19<br />rate: 1.7022865","years: 2020<br />rate: 2.1000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Male","legendgroup":"Male","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[2.1,2.3,2.1,2.56097304432143,3.04213025683954,2.89760985709926,2.89811086622689,3.24873806580082,2.84298824725174,2.53137458259982,2.105637707638,1.58781488493709,1.2010256575753,1.4],"text":["years: 1955-59<br />rate: 2.1000000","years: 1960-64<br />rate: 2.3000000","years: 1965-69<br />rate: 2.1000000","years: 1970-74<br />rate: 2.5609730","years: 1975-79<br />rate: 3.0421303","years: 1980-84<br />rate: 2.8976099","years: 1985-89<br />rate: 2.8981109","years: 1990-94<br />rate: 3.2487381","years: 1995-99<br />rate: 2.8429882","years: 2000-04<br />rate: 2.5313746","years: 2005-09<br />rate: 2.1056377","years: 2010-14<br />rate: 1.5878149","years: 2015-19<br />rate: 1.2010257","years: 2020<br />rate: 1.4000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Total","legendgroup":"Total","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":16.8036529680365},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,14.6],"tickmode":"array","ticktext":["1955-59","1960-64","1965-69","1970-74","1975-79","1980-84","1985-89","1990-94","1995-99","2000-04","2005-09","2010-14","2015-19","2020"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"categoryorder":"array","categoryarray":["1955-59","1960-64","1965-69","1970-74","1975-79","1980-84","1985-89","1990-94","1995-99","2000-04","2005-09","2010-14","2015-19","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.392524300353251,4.95698969258174],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"group","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"196064a2470b":{"x":{},"y":{},"colour":{},"type":"scatter"},"19607145fa7":{"x":{},"y":{},"colour":{}}},"cur_data":"196064a2470b","visdat":{"196064a2470b":["function (y) ","x"],"19607145fa7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-808c11c33ddb0996c857" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-808c11c33ddb0996c857">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[1.1,1.3,1.1,1.31381310250648,1.44649234698095,1.68615991832501,1.64518573352156,1.8719712090828,1.54120692757945,1.44978051385687,1.25593175446265,0.996237664508323,0.713999017211986,0.6],"text":["years: 1955-59<br />rate: 1.1000000","years: 1960-64<br />rate: 1.3000000","years: 1965-69<br />rate: 1.1000000","years: 1970-74<br />rate: 1.3138131","years: 1975-79<br />rate: 1.4464923","years: 1980-84<br />rate: 1.6861599","years: 1985-89<br />rate: 1.6451857","years: 1990-94<br />rate: 1.8719712","years: 1995-99<br />rate: 1.5412069","years: 2000-04<br />rate: 1.4497805","years: 2005-09<br />rate: 1.2559318","years: 2010-14<br />rate: 0.9962377","years: 2015-19<br />rate: 0.7139990","years: 2020<br />rate: 0.6000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Female","legendgroup":"Female","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[3.2,3.3,3.1,3.8967407011319,4.74951399293499,4.19191704854396,4.23261217522744,4.70605796806618,4.21332636385657,3.66386276521181,2.99093070364059,2.20064360478171,1.70228646839463,2.1],"text":["years: 1955-59<br />rate: 3.2000000","years: 1960-64<br />rate: 3.3000000","years: 1965-69<br />rate: 3.1000000","years: 1970-74<br />rate: 3.8967407","years: 1975-79<br />rate: 4.7495140","years: 1980-84<br />rate: 4.1919170","years: 1985-89<br />rate: 4.2326122","years: 1990-94<br />rate: 4.7060580","years: 1995-99<br />rate: 4.2133264","years: 2000-04<br />rate: 3.6638628","years: 2005-09<br />rate: 2.9909307","years: 2010-14<br />rate: 2.2006436","years: 2015-19<br />rate: 1.7022865","years: 2020<br />rate: 2.1000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Male","legendgroup":"Male","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"y":[2.1,2.3,2.1,2.56097304432143,3.04213025683954,2.89760985709926,2.89811086622689,3.24873806580082,2.84298824725174,2.53137458259982,2.105637707638,1.58781488493709,1.2010256575753,1.4],"text":["years: 1955-59<br />rate: 2.1000000","years: 1960-64<br />rate: 2.3000000","years: 1965-69<br />rate: 2.1000000","years: 1970-74<br />rate: 2.5609730","years: 1975-79<br />rate: 3.0421303","years: 1980-84<br />rate: 2.8976099","years: 1985-89<br />rate: 2.8981109","years: 1990-94<br />rate: 3.2487381","years: 1995-99<br />rate: 2.8429882","years: 2000-04<br />rate: 2.5313746","years: 2005-09<br />rate: 2.1056377","years: 2010-14<br />rate: 1.5878149","years: 2015-19<br />rate: 1.2010257","years: 2020<br />rate: 1.4000000"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Total","legendgroup":"Total","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":16.8036529680365},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,14.6],"tickmode":"array","ticktext":["1955-59","1960-64","1965-69","1970-74","1975-79","1980-84","1985-89","1990-94","1995-99","2000-04","2005-09","2010-14","2015-19","2020"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"categoryorder":"array","categoryarray":["1955-59","1960-64","1965-69","1970-74","1975-79","1980-84","1985-89","1990-94","1995-99","2000-04","2005-09","2010-14","2015-19","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.392524300353251,4.95698969258174],"tickmode":"array","ticktext":["1","2","3","4"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["1","2","3","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"group","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"53f42bc6a22":{"x":{},"y":{},"colour":{},"type":"scatter"},"53f4206057d6":{"x":{},"y":{},"colour":{}}},"cur_data":"53f42bc6a22","visdat":{"53f42bc6a22":["function (y) ","x"],"53f4206057d6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 1</strong> Homicide fatality rate pare 100 000 population, Finland 1955-2020. Victims younger than 1 year old have not been included.</p>
-<div class="cell">
-
-</div>
-<p>Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s <span class="citation" data-cites="lehti2014">(<a href="references.html#ref-lehti2014" role="doc-biblioref">Lehti 2014</a>)</span> . During the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased. Finnish homicide trends have been extensively analysed from long duration change <span class="citation" data-cites="lehti2020">(<a href="references.html#ref-lehti2020" role="doc-biblioref">Lehti and Sirén 2020</a>)</span> to analyses of the 1970s homicide boom [<span class="citation" data-cites="kivivuori2003">Kivivuori (<a href="references.html#ref-kivivuori2003" role="doc-biblioref">2003</a>)</span>] and the post-1990s homicide drop in Finland [<span class="citation" data-cites="lehti2014">Lehti (<a href="references.html#ref-lehti2014" role="doc-biblioref">2014</a>)</span>] and in the European context <span class="citation" data-cites="suonpää2022">(<a href="references.html#ref-suonpää2022" role="doc-biblioref">Suonpää et al. 2022</a>)</span> .</p>
+<p>Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s <span class="citation" data-cites="lehti2014">(<a href="references.html#ref-lehti2014" role="doc-biblioref">Lehti 2014</a>)</span> . During the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased. Finnish homicide trends have been extensively analysed from long duration change <span class="citation" data-cites="lehti2020">(<a href="references.html#ref-lehti2020" role="doc-biblioref">Lehti and Sirén 2020</a>)</span> to analyses of the 1970s homicide boom <span class="citation" data-cites="kivivuori2003">(<a href="references.html#ref-kivivuori2003" role="doc-biblioref">Kivivuori 2003</a>)</span> and the post-1990s homicide drop in Finland <span class="citation" data-cites="lehti2014">(<a href="references.html#ref-lehti2014" role="doc-biblioref">Lehti 2014</a>)</span> and in the European context <span class="citation" data-cites="suonpää2022">(<a href="references.html#ref-suonpää2022" role="doc-biblioref">Suonpää et al. 2022</a>)</span> .</p>
 </section>
 <section id="assault" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="assault"><span class="header-section-number">2.2</span> Assault</h2>
@@ -344,12 +353,9 @@ div.csl-indent {
 <p>National victim surveys largely corroborate this stable trend. Assault victimisation has been very stable over the 10-year period.<br>
 </p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c6fa79414aaa6f948ce7" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-c6fa79414aaa6f948ce7">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[11.6,13.8,12.5,14,13.5,13.5,13.8,13.5,10.2,12.1],"text":["year: 2012<br />rate: 11.6<br />violence: Physical violence<br />violence: Physical violence","year: 2013<br />rate: 13.8<br />violence: Physical violence<br />violence: Physical violence","year: 2014<br />rate: 12.5<br />violence: Physical violence<br />violence: Physical violence","year: 2015<br />rate: 14.0<br />violence: Physical violence<br />violence: Physical violence","year: 2016<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2017<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2018<br />rate: 13.8<br />violence: Physical violence<br />violence: Physical violence","year: 2019<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2020<br />rate: 10.2<br />violence: Physical violence<br />violence: Physical violence","year: 2021<br />rate: 12.1<br />violence: Physical violence<br />violence: Physical violence"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Physical violence","legendgroup":"Physical violence","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[4.5,3.9,3.6,4.5,4,4.2,3.9,4.4,2.6,3.6],"text":["year: 2012<br />rate:  4.5<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2013<br />rate:  3.9<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2014<br />rate:  3.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2015<br />rate:  4.5<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2016<br />rate:  4.0<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2017<br />rate:  4.2<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2018<br />rate:  3.9<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2019<br />rate:  4.4<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2020<br />rate:  2.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2021<br />rate:  3.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Resulting in physical injury","legendgroup":"Resulting in physical injury","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":22.648401826484},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2.03,14.57],"tickmode":"array","ticktext":["5","10"],"tickvals":[5,10],"categoryorder":"array","categoryarray":["5","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"violence","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19605817451":{"x":{},"y":{},"colour":{},"type":"scatter"},"1960178413b9":{"x":{},"y":{},"colour":{}}},"cur_data":"19605817451","visdat":{"19605817451":["function (y) ","x"],"1960178413b9":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-fbdf60c29e839daf0f8e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-fbdf60c29e839daf0f8e">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[11.6,13.8,12.5,14,13.5,13.5,13.8,13.5,10.2,12.1],"text":["year: 2012<br />rate: 11.6<br />violence: Physical violence<br />violence: Physical violence","year: 2013<br />rate: 13.8<br />violence: Physical violence<br />violence: Physical violence","year: 2014<br />rate: 12.5<br />violence: Physical violence<br />violence: Physical violence","year: 2015<br />rate: 14.0<br />violence: Physical violence<br />violence: Physical violence","year: 2016<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2017<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2018<br />rate: 13.8<br />violence: Physical violence<br />violence: Physical violence","year: 2019<br />rate: 13.5<br />violence: Physical violence<br />violence: Physical violence","year: 2020<br />rate: 10.2<br />violence: Physical violence<br />violence: Physical violence","year: 2021<br />rate: 12.1<br />violence: Physical violence<br />violence: Physical violence"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Physical violence","legendgroup":"Physical violence","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[4.5,3.9,3.6,4.5,4,4.2,3.9,4.4,2.6,3.6],"text":["year: 2012<br />rate:  4.5<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2013<br />rate:  3.9<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2014<br />rate:  3.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2015<br />rate:  4.5<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2016<br />rate:  4.0<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2017<br />rate:  4.2<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2018<br />rate:  3.9<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2019<br />rate:  4.4<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2020<br />rate:  2.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury","year: 2021<br />rate:  3.6<br />violence: Resulting in physical injury<br />violence: Resulting in physical injury"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Resulting in physical injury","legendgroup":"Resulting in physical injury","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":22.648401826484},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2.03,14.57],"tickmode":"array","ticktext":["5","10"],"tickvals":[5,10],"categoryorder":"array","categoryarray":["5","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"violence","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"53f45ef64d3c":{"x":{},"y":{},"colour":{},"type":"scatter"},"53f4551719c4":{"x":{},"y":{},"colour":{}}},"cur_data":"53f45ef64d3c","visdat":{"53f45ef64d3c":["function (y) ","x"],"53f4551719c4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 2</strong> Violence victims, % of 15–74-year-olds, 2012-2021, Finland. (FCVS).</p>
@@ -361,17 +367,17 @@ div.csl-indent {
 <p><strong>Table 3</strong> Rape offences reported to the police, Finland 2012-2021 (SOCM)</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -419,12 +425,9 @@ div.csl-indent {
 </table>
 <p>Figure 3 contrasts recorded rapes with victim self-reports on sexual violence. Note that the measurement units are different: recorded offences are measured as offences per 10,000 persons, while the sexual victimisation scale is measured as percentages (much more prevalent). There is some consistency in the trends, even though the rise in the results of FCVS is not statistically significant on an annual level.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3655fa1f2d04711530a8" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-3655fa1f2d04711530a8">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1.85933409672297,1.78857403871025,1.84401598537068,1.90074987589543,2.10782736239749,2.25824531618155,2.52450244376548,2.67316188900062,2.62026425636087,3.33619249776641],"text":["year: 2012<br />rate: 1.859334<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2013<br />rate: 1.788574<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2014<br />rate: 1.844016<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2015<br />rate: 1.900750<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2016<br />rate: 2.107827<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2017<br />rate: 2.258245<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2018<br />rate: 2.524502<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2019<br />rate: 2.673162<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2020<br />rate: 2.620264<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2021<br />rate: 3.336192<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Reported rape offences per 10000 p","legendgroup":"Reported rape offences per 10000 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[null,1.3,1,1.1,1.5,1.3,1.5,1.5,1.6,2.1],"text":["year: 2012<br />rate:       NA<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2013<br />rate: 1.300000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2014<br />rate: 1.000000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2015<br />rate: 1.100000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2016<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2017<br />rate: 1.300000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2018<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2019<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2020<br />rate: 1.600000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2021<br />rate: 2.100000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Sexual violence victims, %","legendgroup":"Sexual violence victims, %","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":28.4931506849315},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.88319037511168,3.45300212265473],"tickmode":"array","ticktext":["1.0","1.5","2.0","2.5","3.0"],"tickvals":[1,1.5,2,2.5,3],"categoryorder":"array","categoryarray":["1.0","1.5","2.0","2.5","3.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"offences/victims","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"196063484a00":{"x":{},"y":{},"colour":{},"type":"scatter"},"19606995298b":{"x":{},"y":{},"colour":{}}},"cur_data":"196063484a00","visdat":{"196063484a00":["function (y) ","x"],"19606995298b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7b8a2f5dbc56b07ad7c2" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-7b8a2f5dbc56b07ad7c2">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10],"y":[1.85933409672297,1.78857403871025,1.84401598537068,1.90074987589543,2.10782736239749,2.25824531618155,2.52450244376548,2.67316188900062,2.62026425636087,3.33619249776641],"text":["year: 2012<br />rate: 1.859334<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2013<br />rate: 1.788574<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2014<br />rate: 1.844016<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2015<br />rate: 1.900750<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2016<br />rate: 2.107827<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2017<br />rate: 2.258245<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2018<br />rate: 2.524502<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2019<br />rate: 2.673162<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2020<br />rate: 2.620264<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p","year: 2021<br />rate: 3.336192<br />offences/victims: Reported rape offences per 10000 p<br />offences/victims: Reported rape offences per 10000 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Reported rape offences per 10000 p","legendgroup":"Reported rape offences per 10000 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[null,1.3,1,1.1,1.5,1.3,1.5,1.5,1.6,2.1],"text":["year: 2012<br />rate:       NA<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2013<br />rate: 1.300000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2014<br />rate: 1.000000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2015<br />rate: 1.100000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2016<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2017<br />rate: 1.300000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2018<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2019<br />rate: 1.500000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2020<br />rate: 1.600000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %","year: 2021<br />rate: 2.100000<br />offences/victims: Sexual violence victims, %<br />offences/victims: Sexual violence victims, %"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Sexual violence victims, %","legendgroup":"Sexual violence victims, %","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":28.4931506849315},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.88319037511168,3.45300212265473],"tickmode":"array","ticktext":["1.0","1.5","2.0","2.5","3.0"],"tickvals":[1,1.5,2,2.5,3],"categoryorder":"array","categoryarray":["1.0","1.5","2.0","2.5","3.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"offences/victims","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"53f47428834":{"x":{},"y":{},"colour":{},"type":"scatter"},"53f439296546":{"x":{},"y":{},"colour":{}}},"cur_data":"53f47428834","visdat":{"53f47428834":["function (y) ","x"],"53f439296546":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 3</strong> Reported rape offences per 10 000 persons (SOCM) and percentage of sexual violence victims among 15–74-year-olds (FCVS), Finland 2012-2021.</p>
@@ -432,17 +435,17 @@ div.csl-indent {
 <p><strong>Table 4</strong> Rape offences reported to the police, Finland 2012-2021 (SOCM)</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 18%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -491,8 +494,8 @@ div.csl-indent {
 <p>The Finnish child victim survey (conducted in the years 1988, 2008 and 2013) and School Health Promotion Study (comparable question in 2019) asked ninth graders (age approx. 15) about their sexual experiences with persons at least 5 years older than them. Figure 4 examines trends in self-reported crime in relation to the crimes reported to the police. Note the different measurement units. The initial trend suggests a decreasing trend with increasing official control attention. The latest trends in both data resources have been increasing. Publication of a new measurement is expected soon.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-598182af10163c034bf3" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-598182af10163c034bf3">{"x":{"visdat":{"196043e8714c":["function () ","plotlyVisDat"]},"cur_data":"196043e8714c","attrs":{"196043e8714c":{"x":{},"y":{},"mode":"lines","name":"Reported child sexual abuse offences per 10000 p","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"196043e8714c.1":{"x":{},"y":{},"mode":"markers","name":"Sexual experiences of ninth graders with adults, %","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[0.82,0.45,0.37,0.24,0.52,1.52,0.69,0.62,1.16,1.15,0.9,0.77,0.97,0.99,1.22,1.43,1.62,1.8,1.98,1.93,2.48,1.99,2.01,3.09,2.84,3,2.54,2.22,2.21,2.12,2.49,3.09,3.2,3.77],"mode":"lines","name":"Reported child sexual abuse offences per 10000 p","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1988,2008,2013,2019],"y":[12,7,4,5],"mode":"markers","name":"Sexual experiences of ninth graders with adults, %","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-c1fce8fb2dcc572f351f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c1fce8fb2dcc572f351f">{"x":{"visdat":{"53f46b502415":["function () ","plotlyVisDat"]},"cur_data":"53f46b502415","attrs":{"53f46b502415":{"x":{},"y":{},"mode":"lines","name":"Reported child sexual abuse offences per 10000 p","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"},"53f46b502415.1":{"x":{},"y":{},"mode":"markers","name":"Sexual experiences of ninth graders with adults, %","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":" "},"yaxis":{"domain":[0,1],"automargin":true,"title":" "},"legend":{"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021],"y":[0.82,0.45,0.37,0.24,0.52,1.52,0.69,0.62,1.16,1.15,0.9,0.77,0.97,0.99,1.22,1.43,1.62,1.8,1.98,1.93,2.48,1.99,2.01,3.09,2.84,3,2.54,2.22,2.21,2.12,2.49,3.09,3.2,3.77],"mode":"lines","name":"Reported child sexual abuse offences per 10000 p","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1988,2008,2013,2019],"y":[12,7,4,5],"mode":"markers","name":"Sexual experiences of ninth graders with adults, %","type":"scatter","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 4</strong> Reported child sexual abuse offences per 10000 persons (SOCM) and percentage of ninth graders with sexual experiences with adults <strong>CVS</strong> <span class="citation" data-cites="fagerlund2014">(<a href="references.html#ref-fagerlund2014" role="doc-biblioref">Fagerlund et al. 2014</a>)</span> ; <span class="citation" data-cites="finnish2019">(<a href="references.html#ref-finnish2019" role="doc-biblioref"><span>“Finnish Institute of Health and Welfare”</span> 2019</a>)</span>.</p>
@@ -502,17 +505,17 @@ div.csl-indent {
 <p>Theft offences include petty theft, theft, and aggravated theft. The number of thefts reported to the police has remained relatively stable in absolute terms and per population. In 2020, the year of COVID-19 lockdowns, the number of reported theft offences were above average. Within the general theft category, aggravated theft decreased from 3,248 in 2012 to 2,147 in 2021.</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -560,23 +563,17 @@ div.csl-indent {
 </table>
 <p>The Finnish Crime Victim Survey captures the percentage of persons whose personal property was stolen outside the home (Figure 5). This type of victimisation decreased during the last decade. The same decreasing trend can also be seen in vehicle theft, as captured by the FCVS.</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-04883786a5a5a34e87cb" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-04883786a5a5a34e87cb">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9],"y":[2.6,2.6,2.5,2.4,2.3,2.2,2.3,2.5,2.3],"text":["year: 2013<br />rate: 2.6<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2014<br />rate: 2.6<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2015<br />rate: 2.5<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2016<br />rate: 2.4<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2017<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2018<br />rate: 2.2<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2019<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2020<br />rate: 2.5<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2021<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Recorded theft offences per 100 p (SOCM)","legendgroup":"Recorded theft offences per 100 p (SOCM)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[3.2,2.9,2.7,2.8,2.5,2,1.8,1.3,1.3],"text":["year: 2013<br />rate: 3.2<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2014<br />rate: 2.9<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2015<br />rate: 2.7<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2016<br />rate: 2.8<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2017<br />rate: 2.5<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2018<br />rate: 2.0<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2019<br />rate: 1.8<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2020<br />rate: 1.3<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2021<br />rate: 1.3<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Theft outside home, victims, % (FCVS)","legendgroup":"Theft outside home, victims, % (FCVS)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":28.4931506849315},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,9.6],"tickmode":"array","ticktext":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9],"categoryorder":"array","categoryarray":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.205,3.295],"tickmode":"array","ticktext":["1.5","2.0","2.5","3.0"],"tickvals":[1.5,2,2.5,3],"categoryorder":"array","categoryarray":["1.5","2.0","2.5","3.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"theft","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1960588a6c72":{"x":{},"y":{},"colour":{},"type":"scatter"},"19602cb14d81":{"x":{},"y":{},"colour":{}}},"cur_data":"1960588a6c72","visdat":{"1960588a6c72":["function (y) ","x"],"19602cb14d81":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e3dd42787a0c5be1a3ac" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-e3dd42787a0c5be1a3ac">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9],"y":[2.6,2.6,2.5,2.4,2.3,2.2,2.3,2.5,2.3],"text":["year: 2013<br />rate: 2.6<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2014<br />rate: 2.6<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2015<br />rate: 2.5<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2016<br />rate: 2.4<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2017<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2018<br />rate: 2.2<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2019<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2020<br />rate: 2.5<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)","year: 2021<br />rate: 2.3<br />theft: Recorded theft offences per 100 p (SOCM)<br />theft: Recorded theft offences per 100 p (SOCM)"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Recorded theft offences per 100 p (SOCM)","legendgroup":"Recorded theft offences per 100 p (SOCM)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[3.2,2.9,2.7,2.8,2.5,2,1.8,1.3,1.3],"text":["year: 2013<br />rate: 3.2<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2014<br />rate: 2.9<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2015<br />rate: 2.7<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2016<br />rate: 2.8<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2017<br />rate: 2.5<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2018<br />rate: 2.0<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2019<br />rate: 1.8<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2020<br />rate: 1.3<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)","year: 2021<br />rate: 1.3<br />theft: Theft outside home, victims, % (FCVS)<br />theft: Theft outside home, victims, % (FCVS)"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Theft outside home, victims, % (FCVS)","legendgroup":"Theft outside home, victims, % (FCVS)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":28.4931506849315},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,9.6],"tickmode":"array","ticktext":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9],"categoryorder":"array","categoryarray":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.205,3.295],"tickmode":"array","ticktext":["1.5","2.0","2.5","3.0"],"tickvals":[1.5,2,2.5,3],"categoryorder":"array","categoryarray":["1.5","2.0","2.5","3.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"theft","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"53f459f353b8":{"x":{},"y":{},"colour":{},"type":"scatter"},"53f439e45f7c":{"x":{},"y":{},"colour":{}}},"cur_data":"53f459f353b8","visdat":{"53f459f353b8":["function (y) ","x"],"53f439e45f7c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><strong>Figure 5</strong> Theft of personal property outside home, per cent of the 15–74-year-old population (FCVS), contrasted with reported theft offences per 100 per-sons (SOCM).</p>
 <p>The declining trend of theft against persons and households reflects a drop in the theft of vehicles and other physical property. Identity theft and consumer fraud have increased during the last decade, as observed in both administrative statistics and the FCVS survey system (Figure 6).</p>
 <div class="cell">
-
-</div>
-<div class="cell">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1e8529c196675283fb5e" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-1e8529c196675283fb5e">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9],"y":[0.560236421971394,0.672910491390967,0.645125077724815,0.611815062861408,0.528556373602654,0.552200929372106,0.51436195589301,0.478153049815922,0.386969491772257],"text":["year: 2013<br />rate: 0.5602364<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2014<br />rate: 0.6729105<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2015<br />rate: 0.6451251<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2016<br />rate: 0.6118151<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2017<br />rate: 0.5285564<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2018<br />rate: 0.5522009<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2019<br />rate: 0.5143620<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2020<br />rate: 0.4781530<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2021<br />rate: 0.3869695<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Aggravated theft per 1000 p","legendgroup":"Aggravated theft per 1000 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[2.53777560091502,2.54870788209921,2.46078769407513,2.32705957901236,2.22227663777201,2.16918733312323,2.24538359239656,2.46621078887483,2.26457358287068],"text":["year: 2013<br />rate: 2.5377756<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2014<br />rate: 2.5487079<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2015<br />rate: 2.4607877<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2016<br />rate: 2.3270596<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2017<br />rate: 2.2222766<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2018<br />rate: 2.1691873<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2019<br />rate: 2.2453836<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2020<br />rate: 2.4662108<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2021<br />rate: 2.2645736<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Theft and petty theft per 100 p","legendgroup":"Theft and petty theft per 100 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[3.2,2.9,2.7,2.8,2.5,2,1.8,1.3,1.3],"text":["year: 2013<br />rate: 3.2000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2014<br />rate: 2.9000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2015<br />rate: 2.7000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2016<br />rate: 2.8000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2017<br />rate: 2.5000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2018<br />rate: 2.0000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2019<br />rate: 1.8000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2020<br />rate: 1.3000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2021<br />rate: 1.3000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Theft outside home, victims, %","legendgroup":"Theft outside home, victims, %","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":16.8036529680365},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,9.6],"tickmode":"array","ticktext":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9],"categoryorder":"array","categoryarray":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.24631796636087,3.34065152541139],"tickmode":"array","ticktext":["1","2","3"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["1","2","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"theft","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19609386a95":{"x":{},"y":{},"colour":{},"type":"scatter"},"1960aa2fff":{"x":{},"y":{},"colour":{}}},"cur_data":"19609386a95","visdat":{"19609386a95":["function (y) ","x"],"1960aa2fff":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0d2e24d0a3a800f7e0f1" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-0d2e24d0a3a800f7e0f1">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9],"y":[0.560236421971394,0.672910491390967,0.645125077724815,0.611815062861408,0.528556373602654,0.552200929372106,0.51436195589301,0.478153049815922,0.386969491772257],"text":["year: 2013<br />rate: 0.5602364<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2014<br />rate: 0.6729105<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2015<br />rate: 0.6451251<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2016<br />rate: 0.6118151<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2017<br />rate: 0.5285564<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2018<br />rate: 0.5522009<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2019<br />rate: 0.5143620<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2020<br />rate: 0.4781530<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p","year: 2021<br />rate: 0.3869695<br />theft: Aggravated theft per 1000 p<br />theft: Aggravated theft per 1000 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Aggravated theft per 1000 p","legendgroup":"Aggravated theft per 1000 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[2.53777560091502,2.54870788209921,2.46078769407513,2.32705957901236,2.22227663777201,2.16918733312323,2.24538359239656,2.46621078887483,2.26457358287068],"text":["year: 2013<br />rate: 2.5377756<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2014<br />rate: 2.5487079<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2015<br />rate: 2.4607877<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2016<br />rate: 2.3270596<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2017<br />rate: 2.2222766<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2018<br />rate: 2.1691873<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2019<br />rate: 2.2453836<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2020<br />rate: 2.4662108<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p","year: 2021<br />rate: 2.2645736<br />theft: Theft and petty theft per 100 p<br />theft: Theft and petty theft per 100 p"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Theft and petty theft per 100 p","legendgroup":"Theft and petty theft per 100 p","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1,2,3,4,5,6,7,8,9],"y":[3.2,2.9,2.7,2.8,2.5,2,1.8,1.3,1.3],"text":["year: 2013<br />rate: 3.2000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2014<br />rate: 2.9000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2015<br />rate: 2.7000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2016<br />rate: 2.8000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2017<br />rate: 2.5000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2018<br />rate: 2.0000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2019<br />rate: 1.8000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2020<br />rate: 1.3000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %","year: 2021<br />rate: 1.3000000<br />theft: Theft outside home, victims, %<br />theft: Theft outside home, victims, %"],"type":"scatter","mode":"lines+markers","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Theft outside home, victims, %","legendgroup":"Theft outside home, victims, %","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":24.5080946450809,"l":16.8036529680365},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,9.6],"tickmode":"array","ticktext":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"tickvals":[1,2,3,4,5,6,7,8,9],"categoryorder":"array","categoryarray":["2013","2014","2015","2016","2017","2018","2019","2020","2021"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-30,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.24631796636087,3.34065152541139],"tickmode":"array","ticktext":["1","2","3"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["1","2","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"theft","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"orientation":"h","xanchor":"center","x":0.5},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"53f4477a5b52":{"x":{},"y":{},"colour":{},"type":"scatter"},"53f42929574b":{"x":{},"y":{},"colour":{}}},"cur_data":"53f4477a5b52","visdat":{"53f4477a5b52":["function (y) ","x"],"53f42929574b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>It should be noted that theft offences reported to the police include crimes against businesses and institutions, a quantitatively major crime target. According to the Finnish Crimes against Businesses Survey, theft victimisation against the retail sector remained stable between 2010 and 2018, with some increase in offences committed by unknown persons <span class="citation" data-cites="saarikkomäki2019">(<a href="references.html#ref-saarikkomäki2019" role="doc-biblioref">Saarikkomäki, Lehti, and Kivivuori 2019</a>)</span> . Based on this, it seems that the decreasing trend in theft has benefitted private persons and households more than the businesses in the retail sector.</p>
@@ -586,17 +583,17 @@ div.csl-indent {
 <p>Economic crime covers in this instance tax offences, accounting offences and bankruptcy offences. The number of police-recorded economic crimes has decreased considerably from 2019, which marked the highest total numbers of economic crimes in ten years. In 2021, police registered 2,440 tax offences, accounting offences and bankruptcy offences. This means the number of economic offences decreased by 18 per cent from the previous year and 28 per cent from 2019.</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -646,29 +643,29 @@ div.csl-indent {
 <p>As regards economic crime, no survey-based data are available to complement the above trend descriptions based on police statistics. In the 2018 Crimes against Businesses Survey (FCBS), the firms were asked to report if their competitors had used illegal means in business activities in relation to employees, such as illegal working conditions and terms. In the hotel and restaurant sector, eight per cent of the firms had perceived such illegal competition, whereas the same percentage in retail sector was 2 per cent <span class="citation" data-cites="saarikkomäki2019">(<a href="references.html#ref-saarikkomäki2019" role="doc-biblioref">Saarikkomäki, Lehti, and Kivivuori 2019</a>)</span>. However, the trend remains unspecified as there has not been repeated survey after 2018.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-fagerlund2014" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-fagerlund2014" class="csl-entry" role="listitem">
 Fagerlund, M., M. Peltola, J. Kääriäinen, N. Ellonen, and H. Sariola. 2014. <span>“Lasten ja nuorten väkivaltakokemukset 2013.”</span> In. Tampere: Poliisiammattikorkeakoulu.
 </div>
-<div id="ref-finnish2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-finnish2019" class="csl-entry" role="listitem">
 <span>“Finnish Institute of Health and Welfare.”</span> 2019. In. Helsinki: Finnish Institute of Health; Welfare.
 </div>
-<div id="ref-granath2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-granath2012" class="csl-entry" role="listitem">
 Granath, Sven. 2012. <span>“Homicide in Sweden.”</span> In, 405–19.
 </div>
-<div id="ref-kivivuori2003" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kivivuori2003" class="csl-entry" role="listitem">
 Kivivuori, J. 2003. <span>“Sudden Increase of Homicide in Early 1970s Finland.”</span> <em>Journal of Scandinavian Studies in Criminology and Crime Prevention</em> 3 (1): 621.
 </div>
-<div id="ref-lehti2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lehti2014" class="csl-entry" role="listitem">
 Lehti, M. 2014. <span>“Homicide Drop in Finland, 1996<span></span>2012.”</span> <em>Journal of Scandinavian Studies in Criminology and Crime Prevention</em> 15 (2): 182199,. <a href="https://doi.org/10.1080/14043858.2014.963931">https://doi.org/10.1080/14043858.2014.963931</a>.
 </div>
-<div id="ref-lehti2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lehti2020" class="csl-entry" role="listitem">
 Lehti, M., and R. Sirén. 2020. <span>“The Impact of Alcohol Consumption on Homicide: A Time-Series Analysis of Three Nordic Countries.”</span> <em>European Journal of Criminology</em> 17 (3): 352369. <a href="https://doi.org/10.1177/1477370818802524">https://doi.org/10.1177/1477370818802524</a>.
 </div>
-<div id="ref-saarikkomäki2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-saarikkomäki2019" class="csl-entry" role="listitem">
 Saarikkomäki, Elsa, Martti Lehti, and Janne Kivivuori. 2019. <em>Vähittäiskauppaan Ja Majoitus- Ja Ravintola-Alaan Kohdistuvat Rikokset: Toinen Kansallinen Yritysuhritutkimus 2018</em>. Katsauksia. Helsinki: Helsingin yliopisto, kriminologian ja oikeuspolitiikan instituutti.
 </div>
-<div id="ref-suonpää2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-suonpää2022" class="csl-entry" role="listitem">
 Suonpää, K., J. Kivivuori, P. Aarten, A. Ahven, S. Granath, N. Markwalder, S. Skott, A. H. Thomsen, S. Walser, and M. Liem. 2022. <span>“Homicide Drop in Seven European Countries: General or Specific Across Countries and Crime Types?”</span> <em>European Journal of Criminology</em>. <a href="https://doi.org/10.1177/14773708221103799">https://doi.org/10.1177/14773708221103799</a>.
 </div>
 </div>
@@ -702,9 +699,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -769,6 +780,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

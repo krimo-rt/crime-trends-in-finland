@@ -41,7 +41,7 @@ Based on police recorded offences, the crime trends have been quite similar in t
 
 ```{r, echo=FALSE, warning=FALSE}
 
-figure1_y7 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure7")
+figure1_y7 <- read_excel("Z:/RT-katsaus/crime-trends-in-finland/data_eng.xlsx",sheet="figure7")
 
 fig22_y7 <- plot_ly(figure1_y7, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
 
@@ -55,7 +55,7 @@ fig22_y7
 
 ```{r, echo=FALSE, warning=FALSE}
 
-figure1_y8 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure7")
+figure1_y8 <- read_excel("Z:/RT-katsaus/crime-trends-in-finland/data_eng.xlsx",sheet="figure7")
 
 
 fig22_y8 <- plot_ly(figure1_y8, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
@@ -70,7 +70,7 @@ fig22_y8
 
 ```{r, echo=FALSE, warning=FALSE}
 
-figure1_y9 <- read_excel("C:/Users/ikolttol/Downloads/crime_trends/data_eng.xlsx",sheet="figure9")
+figure1_y9 <- read_excel("Z:/RT-katsaus/crime-trends-in-finland/data_eng.xlsx",sheet="figure9")
 
 
 fig22_y9 <- plot_ly(figure1_y9, x = ~year, y = ~`Reported offences per 1000 pop (SOCM)`, name = "Reported offences per 1000 pop (SOCM)", type = 'scatter', mode = 'lines') %>% layout(xaxis = list(title = " "), yaxis = list(title = " ")) %>%  layout(legend = list(orientation = "h", xanchor = "center", x = 0.5))    
