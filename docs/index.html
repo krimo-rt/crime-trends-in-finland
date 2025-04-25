@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Janne Kivivuori, Ilari Kolttola, Anna Raeste, Karoliina Suonpää, Matti Näsi, Tiina Malin, Markus Kaakinen and Teemu Vauhkonen">
-<meta name="dcterms.date" content="2022-12-19">
+<meta name="author" content="Janne Kivivuori , Ilari Kolttola, Aaro Beuker, Matti Näsi, Tiina Malin, Anna Raeste, Karoliina Suonpää, Maiju Tanskanen and Miisa Törölä">
+<meta name="dcterms.date" content="2025-04-25">
 
-<title>Crime trends in Finland</title>
+<title>Crime trends in Finland 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,6 +26,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -67,7 +68,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,6 +83,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -91,13 +99,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Crime trends in Finland</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Crime trends in Finland</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -106,13 +114,10 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Crime trends in Finland</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://twitter.com/intent/tweet?url=|url|" rel="" title="Twitter" class="quarto-navigation-tool px-1" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-</div>
+      <a href="./">Crime trends in Finland 2024</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -149,7 +154,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./alcohol.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Alcohol and drugs</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,20 +165,26 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./crime prevention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Crime prevention</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Abbreviations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Abbreviations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -181,6 +192,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#crime-trends-in-finland" id="toc-crime-trends-in-finland" class="nav-link active" data-scroll-target="#crime-trends-in-finland">Crime trends in Finland</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#finland" id="toc-finland" class="nav-link" data-scroll-target="#finland">Finland</a></li>
   </ul>
 </nav>
@@ -190,7 +202,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Crime trends in Finland</h1>
+<h1 class="title">Crime trends in Finland 2024</h1>
 </div>
 
 
@@ -200,14 +212,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Janne Kivivuori, Ilari Kolttola, Anna Raeste, Karoliina Suonpää, Matti Näsi, Tiina Malin, Markus Kaakinen and Teemu Vauhkonen </p>
+             <p>Janne Kivivuori , Ilari Kolttola, Aaro Beuker, Matti Näsi, Tiina Malin, Anna Raeste, Karoliina Suonpää, Maiju Tanskanen and Miisa Törölä </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 19, 2022</p>
+      <p class="date">April 25, 2025</p>
     </div>
   </div>
   
@@ -215,33 +227,218 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="crime-trends-in-finland" class="level1 unnumbered">
 <h1 class="unnumbered">Crime trends in Finland</h1>
-<p><strong><em>You can find the PDF version from the original publication Rikollisuustilanne 2022 <a href="https://helda.helsinki.fi/bitstream/handle/10138/352005/Katsauksia_52_Rikollisuustilanne_2021_2022.pdf#page=196">Crime trends in Finland</a></em></strong></p>
+<p><strong>The PDF version is available via the <em>Crime Trends in Finland 2024</em></strong> <a href="https://tuhat.helsinki.fi/ws/portalfiles/portal/578457929/Crime_trends_in_Finland2024.pdf"><strong><em>link</em></strong></a><strong><em>.</em></strong></p>
 <ul>
-<li><p>In Finland, homicide decreased from the early 1990s until recently; the drop may have levelled out or reversed in 2020–22.</p></li>
-<li><p>Finnish homicide remains dominated by marginalised male alcoholics and drinking group conflicts.</p></li>
-<li><p>Assault offences remained stable in 2013–2022, a trend corroborated by victim surveys. Rape offences increased during the decade, also corroborated by victim surveys.</p></li>
-<li><p>The numbers of child sexual abuse offences reported to the police have varied annually but increased in recent years in both crimes reported to the police and victim surveys.</p></li>
-<li><p>Personal and household theft victimisation decreased, while theft offences reported to the police remained stable. The divergence can reflect theft against businesses being more stable than personal victimization.</p></li>
-<li><p>Fraud and identity theft have increased, a trend corroborated by both administrative statistics and the national crime victim survey.</p></li>
-<li><p>The role of alcohol in violent offending decreased, even though the influence of alcohol remains prevalent in violence.</p></li>
-<li><p>In the 15–17 age group, violence, theft and property destruction decreased in the early part of the decade, levelling out after that. In the 18–20 age group the trends of violence, theft and property destruction were similar to the 15–17-year-olds.</p></li>
-<li><p>In Finland, youths under 15 years of age are not criminally culpable. However, their offences are recorded in administrative crime statistics. In this age category, the recorded assault offence rate doubled from 2013 to 2022. While reporting propensity may have increased, available research suggests that the trend may also capture real increase of aggression. Patterns such as use of sharp instruments and offenders taking videos of the crime have increased.</p></li>
-<li><p>International comparisons of violence in European and Nordic adult populations suggest that Finland has above-average problems related to both lethal and other violence. According to EU-wide comparisons, Finland has a high rate of both partner and non-partner violence against women.</p></li>
+<li><p>In Finland, the homicide rate decreased from the early 1990s until recently; the drop levelled out in 2020-22, with 2023 showing a low rate.</p></li>
+<li><p>While the role of alcohol has decreased, homicide remains dominated by marginalised male alcoholics and drinking group conflicts. Among young victims (15- to 29-year-olds), homicide is linked to drugs and contacts with criminal activity.</p></li>
+<li><p>Assault offences remained stable in 2014-2023, a trend corroborated by victim surveys.</p></li>
+<li><p>Recorded rape offences and sexual offences against children have increased over the decade. It should be noted that the legislation has been reformed several times, most recently at the beginning of 2023, and this has broadened the definitions of these crimes. However, recent surveys have also observed rising numbers of victim experiences.</p></li>
+<li><p>Personal and household theft victimisation decreased, while theft offences reported to the police remained stable. The divergence can reflect theft against businesses being more stable than personal victimisation.</p></li>
+<li><p>Fraud and identity theft have increased; this trend is corroborated by both administrative statistics and the national crime victim survey.</p></li>
+<li><p>The role of alcohol in violent offending has decreased. This has been observed in administrative statistics and in youth surveys.</p></li>
+<li><p>In the age groups 15–17 and 18­–20, violence, theft and property destruction decreased in the early part of the decade, levelling out after that.</p></li>
+<li><p>In Finland, youths under 15 years of age are not criminally culpable. However, their offences are recorded in administrative crime statistics. In this age category, the recorded assault offence rate doubled from 2014 to 2023. Patterns such as use of sharp instruments and offenders taking videos of the crime have increased.</p></li>
+<li><p>International comparisons of violence in European and Nordic adult populations suggest that Finland has above-average problems related to lethal and other violence, against both men and women.</p></li>
+<li><p>This report concludes by summarising recent findings on the efficacy of crime prevention methods as applied in Finland.</p></li>
 </ul>
-<p>Unless otherwise mentioned, the trends in this report refer to the decade 2012–2022. This report emphasises findings on homicide, and findings cross-validated by administrative statistics and KRIMO crime surveys.</p>
+<p>Unless otherwise mentioned, the trends in this report refer to the decade 2012–2023. This report emphasises findings on homicide, and findings cross-validated by administrative statistics and KRIMO crime surveys.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Since 1975, the Institute of Criminology and Legal Policy, University of Helsinki (KRIMO) has published an annual overview of crime trends in Finland. The report is published in Finnish <span class="citation" data-cites="kolttola2024">(<a href="references.html#ref-kolttola2024" role="doc-biblioref">Kolttola 2024b</a>)</span>. To make the basic findings available for wider audiences, this short report summarises key findings in English.</p>
+<p>A characteristic feature of KRIMO’s crime monitoring activities has been the parallel use of (a) administrative statistics of recorded crimes and (b) survey-based indicators of crime. Survey-based crime measurement started in the early 1960s and has continued, often in international survey contexts <span class="citation" data-cites="kivivuori_discovery_2011">(<a href="references.html#ref-kivivuori_discovery_2011" role="doc-biblioref">J. Kivivuori 2011a</a>)</span>. The purpose of the surveys was originally to “correct” presumed biases in official crime statistics. However, it is increasingly recognised that administrative statistics and surveys are mutually supplementary measures that capture different ends of the crime continuum. As is reported in this summary, there are also indications that after a major period of rise during the late 20<sup>th</sup> century, the propensity of people to report offences to the police has stabilised. This would increase the trend validity of official crime statistics.</p>
+<p>Following the longstanding principle of combined use of official records and population surveys, this report focuses on homicide and on crime types whose trends can be cross-validated by both data sources. The final part (section 7) of the report provides an overview of crime prevention methods applied in Finland. This part of the report draws on the crime prevention research database FINPREV and on a recent systematic review of Nordic studies relevant for social policy-based prevention <span class="citation" data-cites="beuker2024">(<a href="references.html#ref-beuker2024" role="doc-biblioref">Beuker, Kivivuori, and Raeste 2024b</a>)</span> and <span class="citation" data-cites="beuker_what_2024">(<a href="references.html#ref-beuker_what_2024" role="doc-biblioref">Beuker, Kivivuori, and Raeste 2024c</a>)</span> <span class="citation" data-cites="suonpää2023">(<a href="references.html#ref-suonpää2023" role="doc-biblioref">Karoliina Suonpää et al. 2023b</a>)</span> . The focus is on methods whose preventive effect has research-based support[<a href="#_ftn1">1</a>].</p>
+<p><a href="#_ftnref1">[1]</a> Research summarised in this report has received funding from the Strategic Research Council established within the Research Council of Finland, grant numbers 352600 and 352601.</p>
 </section>
 <section id="finland" class="level1">
 <h1>Finland</h1>
-<p>Situated in northern Europe, Finland has a population of 5.5 million (2022). In terms of socio-political institutions, Finland belongs to a group of Nordic welfare states with Sweden, Denmark, Norway and Iceland. It has a compulsory and free-of-charge school system, connecting all youths to educational institutions up to the age of 18. With 49,000 US dollars as average annual income, the country ranks 16th among 38 OECD countries (OECD Data). Regarding the criminal justice system, Finland represents a culture of penal moderation, with policy emphasis on prevention and rehabilitation. The Finnish prisoner rate of 43 per 100,000 population rate is one of the lowest in Europe <span class="citation" data-cites="aebi2021">(<a href="references.html#ref-aebi2021" role="doc-biblioref">Aebi et al. 2021</a>)</span> and the world.</p>
+<p>Situated in northern Europe, Finland has a population of 5.6 million (2024). In terms of socio-political institutions, Finland belongs to a group of Nordic welfare states with Sweden, Denmark, Norway, and Iceland. It has a compulsory and free-of-charge school system, connecting all youths to educational institutions up to the age of 18. In the UN Human Development Index, Finland ranks 11<sup>th</sup> among 193 ranked nations, belonging to the category of “very high human development” <span class="citation" data-cites="breaking2024">(<a href="references.html#ref-breaking2024" role="doc-biblioref">UNDP 2024a</a>)</span>.</p>
+<p>With regard to its criminal justice system, Finland represents a culture of penal moderation, with policy emphasis on prevention and rehabilitation. The Finnish prisoner rate of 52 per 100&nbsp;000 population rate is one of the lowest in Europe and the world. Over the last decade, the Finnish prisoner rate has decreased. In the European comparison, Finland belongs to the cluster of countries with a “very low” prisoner rate, defined by having a 25 % lower rate than the European median value <span class="citation" data-cites="aebi2024">(<a href="references.html#ref-aebi2024" role="doc-biblioref">Aebi and Cocco 2024a</a>)</span>.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-aebi2021" class="csl-entry" role="listitem">
-Aebi, Marcelo, Edoardo Cocco, Lorena Molnar, and Mélanie M. Tiago. 2021. <em>Prison populations. SPACE I - 2021 <span></span> Council of Europe Annual Penal Statistics: Prison populations</em>. Lausanne: Council of Europe.
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-aaltonen_socioeconomic_2012" class="csl-entry" role="listitem">
+Aaltonen, M., J. Kivivuori, P. Martikainen, and R. Sirén. 2012. <span>“Socioeconomic Differences in Violent Victimization: <span>Exploring</span> the Impact of Data Source and the Inclusivity of the Violence Concept.”</span> <em>European Journal of Criminology</em> 9 (6): 567–83. https://doi.org/<a href="https://doi.org/10.1177/1477370811422800">https://doi.org/10.1177/1477370811422800</a>.
+</div>
+<div id="ref-aebi_prisons_2024" class="csl-entry" role="listitem">
+Aebi, Marcelo F, and Edoardo Cocco. 2024b. <span>“Prisons and <span>Prisoners</span> in <span>Europe</span> 2023: <span>Key</span> <span>Findings</span> of the <span>SPACE</span> <span>I</span> Survey.”</span>
+</div>
+<div id="ref-aebi2024" class="csl-entry" role="listitem">
+———. 2024a. <span>“Prisons and Prisoners in Europe 2023: Key Findings of the SPACE i Survey.”</span>
+</div>
+<div id="ref-aromaa_kansainvalinen_2006" class="csl-entry" role="listitem">
+Aromaa, Kauko, and Markku Heiskanen. 2006b. <span>“Kansainvälinen Rikosuhritutkimus Vaikeuksissa.”</span> <em>Haaste</em> 3 (6): 16–17.
+</div>
+<div id="ref-aromaa2006" class="csl-entry" role="listitem">
+———. 2006a. <span>“Kansainvälinen rikosuhritutkimus vaikeuksissa.”</span> <em>Haaste</em> 3 (6): 1617.
+</div>
+<div id="ref-beuker_mitka_2024" class="csl-entry" role="listitem">
+Beuker, Aaro, Janne Kivivuori, and Anna Raeste. 2024a. <span>“Mitkä Toimenpiteet Vähentävät Rikollisuutta? <span>Rikoksentorjunnan</span> Arviointitutkimuksen Tietokantaan 2016–2024 Tallennetut Vaikuttavuustutkimukset.”</span>
+</div>
+<div id="ref-beuker2024" class="csl-entry" role="listitem">
+———. 2024b. <span>“Mitkä toimenpiteet vähentävät rikollisuutta? Rikoksentorjunnan arviointitutkimuksen tietokantaan 20162024 tallennetut vaikuttavuustutkimukset.”</span>
+</div>
+<div id="ref-beuker_what_2024" class="csl-entry" role="listitem">
+———. 2024c. <span>“What <span>Works</span> in <span>Crime</span> <span>Prevention</span>? <span>Overview</span> of Research in the <span>Finnish</span> Crime Prevention Evaluation Database (<span>FINPREV</span>), 2016-2024.”</span>
+</div>
+<div id="ref-danielsson_nuorten_2022" class="csl-entry" role="listitem">
+Danielsson, Petri. 2022b. <span>“Nuorten Väkivaltarikollisuuden Määrä Ja Piirteet Poliisin Tietoon Tulleen Rikollisuuden Valossa.”</span>
+</div>
+<div id="ref-danielsson2022" class="csl-entry" role="listitem">
+———. 2022a. <span>“Nuorten väkivaltarikollisuuden määrä ja piirteet poliisin tietoon tulleen rikollisuuden valossa.”</span>
+</div>
+<div id="ref-van_dijk_criminal_2007" class="csl-entry" role="listitem">
+Dijk, Jan van, John van Kesteren, and Paul Smit. 2007. <span>“Criminal <span>Victimisation</span> in International <span>Perspective</span>.”</span> In. Haage: Wetenschappelijk Onderzoeken.
+</div>
+<div id="ref-vandijk2007" class="csl-entry" role="listitem">
+Dijk, Jan, John Kesteren, and Paul Smit. 2007. <span>“Criminal Victimisation in International Perspective.”</span> In. Haage: Wetenschappelijk Onderzoeken.
+</div>
+<div id="ref-enzmann_global_2018" class="csl-entry" role="listitem">
+Enzmann, D., J. Kivivuori, I. Haen Marshall, M. Steketee, M. Hough, and M. Killias. 2018b. <em>A <span>Global</span> <span>Perspective</span> on <span>Young</span> <span>People</span> as <span>Offenders</span> and <span>Victims</span>. <span>First</span> <span>Results</span> from the <span>ISRD3</span> <span>Study</span></em>. Switzerland: Springer Briefs in Criminology.
+</div>
+<div id="ref-enzmann2018" class="csl-entry" role="listitem">
+———. 2018a. <em>A Global Perspective on Young People as Offenders and Victims. First Results from the ISRD3 Study</em>. Switzerland: Springer Briefs in Criminology.
+</div>
+<div id="ref-eurostat_database_2025" class="csl-entry" role="listitem">
+Eurostat. 2025a. <span>“Database - <span>Gender</span>-Based Violence - <span>Eurostat</span>.”</span> <a href="https://ec.europa.eu/eurostat/web/gender-based-violence/database">https://ec.europa.eu/eurostat/web/gender-based-violence/database</a>.
+</div>
+<div id="ref-eurostat2025" class="csl-entry" role="listitem">
+Eurostat. 2025b. <span>“Database - Gender-Based Violence - Eurostat,”</span> March. <a href="https://ec.europa.eu/eurostat/web/gender-based-violence/database">https://ec.europa.eu/eurostat/web/gender-based-violence/database</a>.
+</div>
+<div id="ref-finnish_institute_of_health_and_welfare_sexual_2019" class="csl-entry" role="listitem">
+Finnish Institute of Health and Welfare. 2019. <span>“Sexual Experiences with Adults. <span>The</span> Results from the <span>School</span> <span>Health</span> <span>Promotion</span> <span>Study</span> 2019.”</span> In. Helsinki: Finnish Institute of Health; Welfare.
+</div>
+<div id="ref-fra_violence_2014" class="csl-entry" role="listitem">
+FRA. 2014b. <em>Violence Against Women: <span>An</span> <span>EU</span>-Wide Survey. <span>Main</span> Results</em>. Wien, European Union Agency for Fundamental Rights.
+</div>
+<div id="ref-fra2014" class="csl-entry" role="listitem">
+FRA. 2014a. <em>Violence Against Women: An EU-Wide Survey. Main Results</em>. Wien, European Union Agency for Fundamental Rights.
+</div>
+<div id="ref-fra_crime_2021" class="csl-entry" role="listitem">
+FRA. 2021b. <em>Crime, <span>Safety</span> and <span>Victim</span>’s <span>Rights</span>. <span>European</span> <span>Union</span> <span>Fundamental</span> <span>Rights</span> <span>Agency</span></em>. Luxembourg: Publications Office of the European Union.
+</div>
+<div id="ref-fra2021" class="csl-entry" role="listitem">
+FRA. 2021a. <em>Crime, Safety and Victim<span>’</span>s Rights. European Union Fundamental Rights Agency</em>. Luxembourg: Publications Office of the European Union.
+</div>
+<div id="ref-granath_homicide_2012" class="csl-entry" role="listitem">
+Granath, Sven. 2012a. <span>“Homicide in <span>Sweden</span>.”</span> In, 405–19.
+</div>
+<div id="ref-granath2012" class="csl-entry" role="listitem">
+———. 2012b. <span>“Homicide in Sweden.”</span> In, 405–19.
+</div>
+<div id="ref-humbert_undoing_2021" class="csl-entry" role="listitem">
+Humbert, Anne Laure, Sofia Strid, Jeff Hearn, and Dag Balkmar. 2021. <span>“Undoing the <span>‘<span>Nordic</span> <span>Paradox</span>’</span>: <span>Factors</span> Affecting Rates of Disclosed Violence Against Women Across the <span>EU</span>.”</span> <em>PLOS ONE</em> 16 (5). https://doi.org/<a href="https://doi.org/10.1371/journal.pone.0249693">https://doi.org/10.1371/journal.pone.0249693</a>.
+</div>
+<div id="ref-inchley_enhancing_2020" class="csl-entry" role="listitem">
+Inchley, Joanna C., Gonneke W. J. M. Stevens, Oddrun Samdal, and Dorothy B. Currie. 2020. <span>“Enhancing <span>Understanding</span> of <span>Adolescent</span> <span>Health</span> and <span>Well</span>-<span>Being</span>: <span>The</span> <span>Health</span> <span>Behaviour</span> in <span>School</span>-Aged <span>Children</span> <span>Study</span>.”</span> <em>Journal of Adolescent Health</em> 66 (6): S3–5. <a href="https://doi.org/10.1016/j.jadohealth.2020.03.014">https://doi.org/10.1016/j.jadohealth.2020.03.014</a>.
+</div>
+<div id="ref-kaakinen_school_2022" class="csl-entry" role="listitem">
+Kaakinen, Markus, Janne Kivivuori, Dirk Enzmann, Anna Raeste, and Matti Näsi. 2022. <span>“School and Home-Based Responding in an Online Youth Crime Survey: <span>A</span> Natural Experiment Related to School Lockdown in Spring 2020.”</span> <em>Nordic Journal of Criminology</em> 23 (2): 123–35. <a href="https://doi.org/10.1080/2578983X.2022.2097901">https://doi.org/10.1080/2578983X.2022.2097901</a>.
+</div>
+<div id="ref-kivivuori_sudden_2003" class="csl-entry" role="listitem">
+Kivivuori, J. 2003b. <span>“Sudden <span>Increase</span> of <span>Homicide</span> in <span>Early</span> 1970s <span>Finland</span>.”</span> <em>Journal of Scandinavian Studies in Criminology and Crime Prevention</em> 3 (1): 6–21.
+</div>
+<div id="ref-kivivuori2003" class="csl-entry" role="listitem">
+———. 2003a. <span>“Sudden Increase of Homicide in Early 1970s Finland.”</span> <em>Journal of Scandinavian Studies in Criminology and Crime Prevention</em> 3 (1): 621.
+</div>
+<div id="ref-kivivuori_discovery_2011" class="csl-entry" role="listitem">
+———. 2011a. <em>Discovery of <span>Hidden</span> <span>Crime</span>. <span>Self</span>-<span>Report</span> <span>Surveys</span> in <span>Criminal</span> <span>Policy</span> <span>Context</span></em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-kivivuori2011" class="csl-entry" role="listitem">
+———. 2011b. <em>Discovery of Hidden Crime. Self-Report Surveys in Criminal Policy Context</em>. Oxford: Oxford University Press.
+</div>
+<div id="ref-kivivuori_understanding_2014" class="csl-entry" role="listitem">
+———. 2014. <span>“Understanding <span>Trends</span> in <span>Personal</span> <span>Violence</span>: <span>Does</span> <span>Cultural</span> <span>Sensitivity</span> <span>Mat</span>-Ter?”</span> Edited by Michael Tonry. <em>Crime and Justice</em> ume 43.
+</div>
+<div id="ref-kivivuori_comparing_2024" class="csl-entry" role="listitem">
+Kivivuori, Janne, Maiju Tanskanen, Karoliina Suonpää, and Anna Raeste. 2024. <span>“Comparing Youth and Adult Homicide Victimization in <span>Finland</span> 2002–2018: <span>A</span> Latent Class Approach.”</span> <em>Nordic Journal of Criminology</em> 25 (1): 1–17. https://doi.org/<a href="https://doi.org/10.18261/njc.25.1.7">https://doi.org/10.18261/njc.25.1.7</a>.
+</div>
+<div id="ref-kivivuori_nordic_2022" class="csl-entry" role="listitem">
+Kivivuori, J, M Rautelin, B Netterstrøm J., D Lindström, GS Guðbjörg S.Bergsdóttir, JO Jónasson, M Lehti, S Granath, M Okholm, and P Karonen. 2022b. <span>“Nordic <span>Homicide</span> in <span>Deep</span> <span>Time</span>.”</span> In. Helsinki: Helsinki University Press. <a href="https://hup.fi/site/books/m/10.33134/HUP-15/">https://hup.fi/site/books/m/10.33134/HUP-15/</a>.
+</div>
+<div id="ref-kivivuori2022" class="csl-entry" role="listitem">
+———. 2022a. <span>“Nordic Homicide in Deep Time.”</span> In. Helsinki: Helsinki University Press. <a href="https://hup.fi/site/books/m/10.33134/HUP-15/">https://hup.fi/site/books/m/10.33134/HUP-15/</a>.
+</div>
+<div id="ref-kivivuori_kansainvalisen_2014" class="csl-entry" role="listitem">
+Kivivuori, J., V. Salmi, M. Aaltonen, and H. Elonheimo. 2014b. <em>Kansainvälisen Nuorisorikollisuuskyselyn (<span>ISRD</span>-3) Mittaukset <span>Suomessa</span> 2013. <span>Okeuspoliittisen</span> Tutkimuslaitoksen Verkkokatsauksia 35/2014</em>. Helsinki: Oikeuspoliittinen tutkimuslaitos.
+</div>
+<div id="ref-kivivuori2014" class="csl-entry" role="listitem">
+———. 2014a. <em>Kansainvälisen nuorisorikollisuuskyselyn (ISRD-3) mittaukset Suomessa 2013. Okeuspoliittisen tutkimuslaitoksen verkkokatsauksia 35/2014</em>. Helsinki: Oikeuspoliittinen tutkimuslaitos.
+</div>
+<div id="ref-kivivuori_supervision_2013" class="csl-entry" role="listitem">
+Kivivuori, J., V. Salmi, and S. Walser. 2013. <span>“Supervision <span>Mode</span> <span>Effects</span> in <span>Computerized</span> <span>Delin</span>-Quency <span>Surveys</span> at <span>School</span>: <span>Finnish</span> <span>Replication</span> of a <span>Swiss</span> <span>Experiment</span>.”</span> <em>Journal of Experimental Criminology</em> 9 (1): 91–107. https://doi.org/<a href="https://doi.org/10.1007/s11292-012-9162-z">https://doi.org/10.1007/s11292-012-9162-z</a>.
+</div>
+<div id="ref-kivivuori_gender_2012" class="csl-entry" role="listitem">
+Kivivuori, J., R. Sirén, and P. Danielsson. 2012. <span>“Gender <span>Framing</span> <span>Effects</span> in <span>Victim</span> <span>Surveys</span>.”</span> <em>European Journal of Criminology</em> 9 (2): 142–58. https://doi.org/<a href="https://doi.org/10.1177/1477370811424383">https://doi.org/10.1177/1477370811424383</a>.
+</div>
+<div id="ref-kolttola_rikollisuustilanne_2024" class="csl-entry" role="listitem">
+Kolttola, Ilari. 2024a. <span>“Rikollisuustilanne 2023 – <span>Rikollisuus</span>­kehitys Tilastojen Ja Tutkimusten Valossa,”</span> Kriminologian ja oikeuspolitiikan instituutin katsauksia 65/2024,.
+</div>
+<div id="ref-kolttola2024" class="csl-entry" role="listitem">
+———. 2024b. <span>“Rikollisuustilanne 2023 Rikollisuus­kehitys Tilastojen Ja Tutkimusten Valossa,”</span> Kriminologian ja oikeuspolitiikan instituutin katsauksia 65/2024,.
+</div>
+<div id="ref-krusselmann_firearm_2023" class="csl-entry" role="listitem">
+Krüsselmann, Katharina, Pauline Aarten, Sven Granath, Janne Kivivuori, Nora Markwalder, Karoliina Suonpää, Asser Hedegaard Thomsen, Simone Walser, and Marieke Liem. 2023. <span>“Firearm <span>Homicides</span> in <span>Europe</span>: <span>A</span> <span>Comparison</span> with <span>Non</span>-<span>Firearm</span> <span>Homicides</span> in <span>Five</span> <span>European</span> <span>Countries</span>.”</span> <em>Global Crime</em> 24 (2): 145–67. <a href="https://doi.org/10.1080/17440572.2023.2211513">https://doi.org/10.1080/17440572.2023.2211513</a>.
+</div>
+<div id="ref-lehti_homicide_2014" class="csl-entry" role="listitem">
+Lehti, M. 2014. <span>“Homicide Drop in <span>Finland</span>, 1996–2012.”</span> <em>Journal of Scandinavian Studies in Criminology and Crime Prevention</em> 15 (2): 182–99,. https://doi.org/<a href="https://doi.org/10.1080/14043858.2014.963931">https://doi.org/10.1080/14043858.2014.963931</a>.
+</div>
+<div id="ref-lehti_henkirikoskatsaus_2019" class="csl-entry" role="listitem">
+———. 2019b. <em>Henkirikoskatsaus</em>. Helsinki: Helsingin yliopisto.
+</div>
+<div id="ref-lehti2019" class="csl-entry" role="listitem">
+———. 2019a. <em>Henkirikoskatsaus</em>. Helsinki: Helsingin yliopisto.
+</div>
+<div id="ref-lehti_henkirikoskatsaus_2020" class="csl-entry" role="listitem">
+Lehti, Martti. 2020. <span>“Henkirikoskatsaus 2020.”</span> 41/2020.
+</div>
+<div id="ref-lehti_impact_2020" class="csl-entry" role="listitem">
+Lehti, M., and R. Sirén. 2020. <span>“The Impact of Alcohol Consumption on Homicide: <span>A</span> Time-Series Analysis of Three <span>Nordic</span> Countries.”</span> <em>European Journal of Criminology</em> 17 (3): 352–69. https://doi.org/<a href="https://doi.org/10.1177/1477370818802524">https://doi.org/10.1177/1477370818802524</a>.
+</div>
+<div id="ref-mielityinen_lasten_2023" class="csl-entry" role="listitem">
+Mielityinen, Laura, Sari Hautamäki, Venla Hakala, Monica Fagerlund, and Noora Ellonen. 2023a. <span>“Lasten Ja Nuorten Väkivaltakokemukset 2022 – <span>Määrät</span>, Piirteet Ja Niiden Muutokset 1988-2022.”</span>
+</div>
+<div id="ref-mielityinen2023" class="csl-entry" role="listitem">
+———. 2023b. <span>“Lasten Ja Nuorten Väkivaltakokemukset 2022 Määrät, Piirteet Ja Niiden Muutokset 1988-2022.”</span>
+</div>
+<div id="ref-saarikkomaki_vahittaiskauppaan_2019" class="csl-entry" role="listitem">
+Saarikkomäki, Elsa, Martti Lehti, and Janne Kivivuori. 2019a. <em>Vähittäiskauppaan Ja Majoitus- Ja Ravintola-Alaan Kohdistuvat Rikokset: <span>Toinen</span> Kansallinen Yritysuhritutkimus 2018</em>. Katsauksia 33/2019. Helsinki: Helsingin yliopisto, kriminologian ja oikeuspolitiikan instituutti.
+</div>
+<div id="ref-saarikkomäki2019" class="csl-entry" role="listitem">
+———. 2019b. <em>Vähittäiskauppaan Ja Majoitus- Ja Ravintola-Alaan Kohdistuvat Rikokset: Toinen Kansallinen Yritysuhritutkimus 2018</em>. Katsauksia 33/2019. Helsinki: Helsingin yliopisto, kriminologian ja oikeuspolitiikan instituutti.
+</div>
+<div id="ref-suonpaa_syrjaytymisen_2023" class="csl-entry" role="listitem">
+Suonpää, Karoliina, Essi Pentikäinen, Minka Ohtonen, Lari Hokkanen, Katri Sarkia, Heikki Hiilamo, Janne Kivivuori, and Antti Latvala. 2023a. <span>“Syrjäytymisen Ja Huono-Osaisuuden Yhteys Turvallisuuteen : <span>Kausaliteetista</span> Politiikkatoimiin.”</span> <a href="https://julkaisut.valtioneuvosto.fi/handle/10024/164894">https://julkaisut.valtioneuvosto.fi/handle/10024/164894</a>.
+</div>
+<div id="ref-suonpää2023" class="csl-entry" role="listitem">
+———. 2023b. <span>“Syrjäytymisen ja huono-osaisuuden yhteys turvallisuuteen : Kausaliteetista politiikkatoimiin.”</span> <a href="https://julkaisut.valtioneuvosto.fi/handle/10024/164894">https://julkaisut.valtioneuvosto.fi/handle/10024/164894</a>.
+</div>
+<div id="ref-suonpaa_nuorten_2024" class="csl-entry" role="listitem">
+Suonpää, Karoliina, Anna Raeste, and Kaisla Saarteenoja. 2024a. <span>“Nuorten Rikoskäyttäytyminen Ja Uhrikokemukset 2024.”</span> <a href="https://helda.helsinki.fi/items/0f8a9db0-20b5-4988-b943-c9fb9a8ba7f2">https://helda.helsinki.fi/items/0f8a9db0-20b5-4988-b943-c9fb9a8ba7f2</a>.
+</div>
+<div id="ref-suonpää2024" class="csl-entry" role="listitem">
+———. 2024b. <span>“Nuorten Rikoskäyttäytyminen Ja Uhrikokemukset 2024.”</span> <a href="https://helda.helsinki.fi/items/0f8a9db0-20b5-4988-b943-c9fb9a8ba7f2">https://helda.helsinki.fi/items/0f8a9db0-20b5-4988-b943-c9fb9a8ba7f2</a>.
+</div>
+<div id="ref-suonpaa_homicide_2022" class="csl-entry" role="listitem">
+Suonpää, K., J. Kivivuori, P. Aarten, A. Ahven, S. Granath, N. Markwalder, S. Skott, A. H. Thomsen, S. Walser, and M. Liem. 2022. <span>“Homicide Drop in Seven <span>European</span> Countries: <span>General</span> or Specific Across Countries and Crime Types?”</span> <em>European Journal of Criminology</em>. <a href="https://doi.org/10.1177/14773708221103799">https://doi.org/10.1177/14773708221103799</a>.
+</div>
+<div id="ref-törölä2024" class="csl-entry" role="listitem">
+Törölä, Miisa. 2024. <span>“Henkirikoskatsaus 2024.”</span>
+</div>
+<div id="ref-torola_henkirikoskatsaus_2024" class="csl-entry" role="listitem">
+Törölä, Miisa, Anna Raeste, and Sofia Malinen. 2024. <span>“Henkirikoskatsaus 2024.”</span>
+</div>
+<div id="ref-undp_breaking_2024" class="csl-entry" role="listitem">
+UNDP, ed. 2024b. <em>Breaking the Gridlock: Reimagining Cooperation in a Polarized World</em>. Human Development Report 2023/2024. New York: United Nations Development Programme (UNDP).
+</div>
+<div id="ref-breaking2024" class="csl-entry" role="listitem">
+UNDP, ed. 2024a. <em>Breaking the Gridlock: Reimagining Cooperation in a Polarized World</em>. Human Development Report 2023/2024. New York: United Nations Development Programme (UNDP).
 </div>
 </div>
 </section>
@@ -282,18 +479,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -325,11 +511,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/krimo-rt\.github\.io\/crime-trends-in-finland\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -339,8 +564,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -352,7 +586,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -396,6 +753,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -421,6 +779,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -484,12 +868,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Crime indicators.html" class="pagination-link">
+      <a href="./Crime indicators.html" class="pagination-link" aria-label="Crime indicators">
         <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Crime indicators</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
