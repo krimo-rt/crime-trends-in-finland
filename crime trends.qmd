@@ -2,9 +2,11 @@
 
 ## Homicide
 
-Homicide includes five legal crime labels: murder, manslaughter, manslaughter under mitigating circumstances, infanticide, and causing of death in the context of an assault offence. In Finnish penal law, the last mentioned category refers to incidents in which the violence was intentional, while the result of death was not. Together, these crime rubrics correspond to the definition of homicide used in the European Homicide Monitor standard [@granath2012], capturing lethal and intentional interpersonal violence.
+Homicide
 
-In the last ten years, the number of these offences has varied between 116 and 74. In 2022, the homicide rate in Finland was 1.49 per 100 000 population.
+Homicide includes five legal crime labels: murder, manslaughter, manslaughter under mitigating circumstances, infanticide, and assault leading to death. Under Finnish penal law, the last-mentioned category refers to incidents in which the violence was intentional, while the result of death was not. Together, these crime rubrics correspond to the definition of homicide used in the European Homicide Monitor standard [@granath2012], capturing lethal and intentional interpersonal violence.
+
+Over the last ten years, the number of these offences has varied between 116 and 64. In 2023, the homicide rate in Finland was 1.14 per 100 000 population.
 
 ```{r, include=FALSE}
 library(gapminder)
@@ -30,33 +32,28 @@ library(plyr)
 library(readxl)
 library(plotly)
 library(janitor)
-library(hrbrthemes)
+#library(hrbrthemes)
 library(bslib)
 library(kableExtra)
 library(gt)
-
-
-table1 <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx", sheet="table1")
-
-#knitr::kable(table1)
 ```
 
-**Table 1** Homicide offences reported to the police, Finland 2013--2022 (SOCM.)
+**Table 1** Homicide offences reported to the police, Finland 2014--2023 (SOCM.)
 
-|                          | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Homicides                | 107  | 112  | 116  | 96   | 74   | 95   | 83   | 95   | 94   | 83   |
-| Homicide per 100,000 pop | 1.96 | 2.05 | 2.11 | 1.74 | 1.34 | 1.72 | 1.50 | 1.72 | 1.69 | 1.49 |
+|                          | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|--------------------------|------|------|------|------|------|------|------|------|------|------|
+| Homicides                | 112  | 116  | 96   | 74   | 95   | 83   | 95   | 94   | 83   | 64   |
+| Homicide per 100,000 pop | 2.05 | 2.11 | 1.74 | 1.34 | 1.72 | 1.50 | 1.72 | 1.69 | 1.49 | 1.14 |
 
-Figure 1 shows the homicide trend based on cause-of-death statistics from 1955, using 5-year periods, with the year 2020 also given. The trend shows a high homicide rate period from 1970 to the beginning of the 1990s, after which a consistent homicide drop took place. The most recent observation year suggests an end to the drop among male victims. Note that infanticide, defined as including victims less than one year old, has not been included in Figure 1.
+Figure 1 shows the homicide trend based on cause-of-death statistics from 1955, using 5-year periods, with the years 2020-2023 also given. The trend shows a high homicide rate from 1970 to the beginning of the 1990s, after which a consistent drop in homicide rate took place. The most recent observation years suggest an end to the drop. Note that infanticides, defined as including victims less than one year old, have not been included in Figure 1.
 
 ```{r, echo=FALSE}
 
-figure1_h <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure1")
+figure1_h <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure1.0")
 
 fig2_h <- figure1_h %>% 
   pivot_longer(
-    cols = "1955-59":"2020", 
+    cols = "1955-59":"2020-23", 
     names_to = "years", 
     values_to =  "rate", 
   )
@@ -79,45 +76,32 @@ ggplotly(fig22_h) %>% layout(legend = list(orientation = "h", xanchor = "center"
 
 ```
 
-**Figure 1** Homicide fatality rate pare 100 000 population, Finland 1955-2020. Victims younger than 1 year old have not been included.
+**Figure 1** Homicide fatality rate pare 100 000 population, Finland 1955-2023. Victims younger than 1 year old have not been included.
 
-```{r, echo=FALSE}
-#table2 <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="table2")
+Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s [@lehti_homicide_2014]. Over the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased.
 
-#| tbl-colwidths: [20,10]
-
-# table2_2 <- knitr::kable(table2,"html")
-
-#knitr::kable(table2, format = "html", table.attr = "style='width:80%;'")  %>% 
-# kable_paper(bootstrap_options = "striped", full_width = F)
-  # kableExtra::kable_styling()
-
-#table2 %>% gt() %>% as_raw_html()
-
-```
-
-Finnish homicide is still characterised by a high proportion of incidents involving drunken marginalised males. However, the presence of alcohol drunkenness in homicide has decreased since the 1990s [@lehti2014] . During the last 10 years, the proportion of offenders under the influence of alcohol has remained rather stable whereas the role of drug use has increased. Finnish homicide trends have been extensively analysed from long duration change [@lehti2020] to analyses of the 1970s homicide boom [@kivivuori2003] and the post-1990s homicide drop in Finland [@lehti2014] and in the European context [@suonpää2022] .
+Finnish homicide trends have been extensively analysed, with studies ranging from long duration change [@lehti_henkirikoskatsaus_2020; @kivivuori2022] to analyses of the 1970s homicide boom [@kivivuori2003] and the post-1990s homicide drop in Finland [@lehti_homicide_2014] and in the European context [@suonpaa_homicide_2022]. 
 
 ## Assault
 
-Assaults include three crime rubrics: assault, aggravated assault and petty assault. The recorded number of these offences was 35,515 in 2013, and 38,160 in 2022. The number of reported offences was stable from 2014 to 2021, with approximately 6 offences per 1000 population. Last year the number was close to 7 offences per 1000 population (Table 2).
+Assaults include three crime rubrics: assault, aggravated assault, and petty assault. The recorded number of these offences was 32,928 in 2014, and 41,271 in 2023. The number of reported offences was relatively stable from 2014 to 2021, with approximately 6 offences per 1000 population. Since 2022 there has been a slight increase and in 2023 assault offences rose to more than 7 offences per 1000 population (Table 2). There were 25 % more recorded assaults in 2023 than 10 years before.
 
-**Table 2** Assault offences reported to the police, Finland 2013-2022 (SOCM.)
+**Table 2** Assault offences reported to the police, Finland 2014-2023 (SOCM.)
 
-|                          | 2013   | 2014   | 2015   | 2016   | 2017   | 2018   | 2019   | 2020   | 2021   | 2022   |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Assault offences         | 35,515 | 32,928 | 33,661 | 33,769 | 33,535 | 33,639 | 33,849 | 33,285 | 34,123 | 34,123 |
-| Assaults per 100,000 pop | 6,51   | 6.02   | 6.13   | 6.14   | 6.08   | 6.10   | 6.13   | 6.01   | 6.15   | 6.90   |
+|   | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| Assault offences | 32,928 | 33,661 | 33,769 | 33,535 | 33,639 | 33,849 | 33,285 | 34,123 | 38,160 | 41,271 |
+| Assaults per 100,000 pop | 6.02 | 6.13 | 6.14 | 6.08 | 6.10 | 6.13 | 6.01 | 6.15 | 6.86 | 7.36 |
 
-National victim surveys largely corroborate the stable trend from 2013 to 2021 (Figure 2). Assault victimisation has been very stable over the 10-year period.\
+National victim surveys largely corroborate the stable recorded offences trend from 2012 to 2023 (Figure 2). However, we cannot observe victimisation rising after 2021 above the levels observed ten years earlier. Note that the FCVS system moved to 2-year intervals after 2021.
 
 ```{r, echo=FALSE}
 
-figure1_a <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure2")
+figure1_a <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure2")
 
 fig2_a <- figure1_a %>% 
   pivot_longer(
-    cols = "2012":"2021", 
+    cols = "2012":"2023", 
     names_to = "year", 
     values_to =  "rate", 
   )
@@ -140,32 +124,36 @@ ggplotly(fig22_a)  %>% layout(legend = list(orientation = "h", xanchor = "center
 
 ```
 
-**Figure 2** Violence victims, % of 15--74-year-olds, 2012-2021, Finland. (FCVS).
+**Figure 2** Violence victims, % of 15--74-year-olds, 2012-2023, Finland. (FCVS).
 
-The year 2020 shows a violence dip (Figure 2). The temporary decrease could probably be explained by COVID-19 related lockdowns and closures, as bars and restaurants were closed for a period in the spring of 2020. The most recent reading (2021) saw restoration of the standard level of risk. This temporary drop is not seen in police statistics. During the period 1980-2009, when intermittent victim surveys were conducted, Finnish victimisation trends and trends of recorded offences were often divergent, a discrepancy explained by an increasing propensity of victims to report crimes to the police. During the last decade, reporting propensity has saturated to a stable level, a partial explanation why survey and register sources yielded similar trends in assault offences.
+The year 2020 shows a dip in violence (Figure 2). The temporary decrease can probably be explained by COVID-19 related lockdowns and closures, as bars and restaurants were closed for a period in the spring of 2020. The most recent reading (2021) saw resumption of the standard level of risk. This temporary drop is not seen in police statistics.
+
+During the period 1980-2009, when intermittent victim surveys were conducted, Finnish victimisation trends and trends of recorded offences were often divergent, a discrepancy explained by an increasing propensity of victims to report crimes to the police. During the last decade, reporting propensity has saturated to a stable level, a partial explanation for why survey and register sources have yielded similar trends in assault offences.
 
 ## Sexual violence
 
-Sexual violence here comprises rape offences (rape and aggravated rape, including attempts) and child sexual abuse (CSA; child sexual abuse and aggravated child sexual abuse, including attempts). It is noteworthy to mention that the law on sexual offences was reformed in the beginning of 2023. Due to the reform, sexual crimes have been under public discussion, which may have increased victim awareness or propensity to report crimes.
+Sexual violence here comprises rape offences (rape and aggravated rape, including attempts; Criminal Code 20:1-2) and sexual offences against children (rape of a child, aggravated rape of a child, sexual abuse of a child, aggravated sexual abuse of a child, child sexual abuse, including attempts; Criminal Code 20:12-16).
 
-The number of rape offences reported to the police has increased in the past 10 years (Table 3). In 2022 the number was lower than in 2021, when the number had increased by more than a quarter from the previous year. In the longer-term, the number has been rising. This can partly be explained by legislative changes and victim awareness.
+The law on sexual offences was reformed and the new legislation came into force in the beginning of 2023, expanding the definitions of crimes and increasing penalties. The most significant changes were the consent-based definition of rape and the separation of sexual offenses against children from those against adults. In addition to rape, the lack of consent was also emphasised in other sexual offenses. For instance, sexual harassment can be committed through other acts besides touching when the act is severe enough.
 
-**Table 3** Rape offences reported to the police, Finland 2013-2022 (SOCM)
+The number of rape offences reported to the police has increased over the past 10 years (Table 3). In 2023, the number of reported offences was 1,919, which is the highest number in a ten-year period. This can partly be explained by legislative changes and victim awareness.
 
-|                               | 2013 | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  | 2022  |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Rape offences                 | 975  | 1,009 | 1,043 | 1,160 | 1,245 | 1,393 | 1,477 | 1,450 | 1,851 | 1,669 |
-| Rape offences per 100,000 pop | 1.79 | 1.84  | 1.90  | 2.11  | 2.26  | 2.52  | 2.67  | 2.62  | 3.34  | 3.00  |
+**Table 3** Rape offences reported to the police, Finland 2014-2023 (SOCM)
 
-Figure 3 contrasts recorded rapes with victim self-reports on sexual violence. Note that the measurement units are different: recorded offences are measured as offences per 10,000 persons, while the sexual victimisation scale is measured as percentages (much more prevalent). There is some consistency in the trends, even though the rise in the results of FCVS is not statistically significant on an annual level.
+|   | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| Rape offences | 1,009 | 1,043 | 1,160 | 1,245 | 1,393 | 1,477 | 1,450 | 1,851 | 1,669 | 1,919 |
+| Rape offences per 100,000 pop | 1.84 | 1.90 | 2.11 | 2.26 | 2.52 | 2.67 | 2.62 | 3.34 | 3.00 | 3.42 |
+
+Figure 3 compares recorded rapes with victim self-reports on sexual violence. Note that the measurement units are different: recorded offences are measured as offences per 10,000 persons, while the sexual victimisation scale is measured as percentages (much more prevalent). There is some consistency in the trends, even though the rise in the results of FCVS is not statistically significant on an annual level.
 
 ```{r, echo=FALSE}
 
-figure1_r <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure3")
+figure1_r <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure3")
 
 fig2_r <- figure1_r %>% 
   pivot_longer(
-    cols = "2012":"2021", 
+    cols = "2012":"2023", 
     names_to = "year", 
     values_to =  "rate", 
   )
@@ -187,22 +175,22 @@ ggplotly(fig22_r) %>% layout(legend = list(orientation = "h", xanchor = "center"
 
 ```
 
-**Figure 3** Reported rape offences per 10 000 persons (SOCM) and percentage of sexual violence victims among 15--74-year-olds (FCVS), Finland 2012-2021.
+**Figure 3** Reported rape offences per 10 000 persons (SOCM) and percentage of sexual violence victims among 15--74-year-olds (FCVS), Finland 2012-2023.
 
-In the past ten years, the number of child sexual abuse offences reported to the police has varied annually as the number is dependent on crime series and the way they have been recorded (Table 4). In the last few years, the number has been growing and in 2022, 2,380 cases of child sexual abuse were reported to the police. Some of the increase can be explained by changes in law and reporting propensities but the increase in recent years cannot fully be explained by these changes.
+Over the past ten years, the number of sexual offences against children reported to the police has varied annually as the number is dependent on crime series and the way they have been recorded (Table 4). Since 2018, the number has been growing annually, but levelled off in 2023. In that year, 2,319 cases of sexual offences against children were reported to the police, which is a 2.5 percent decrease from the previous year. Some of the increase can be explained by changes in law and reporting propensities but the increase in recent years cannot be fully explained by these changes.
 
-**Table 4** Rape offences reported to the police, Finland 2013-2022 (SOCM)
+**Table 4** Sexual offences against children reported to the police, Finland 2014-2023
 
-|                                          | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  | 2022  |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Child sexual abuse offences              | 1,634 | 1,389 | 1,217 | 1,218 | 1,168 | 1,373 | 1,709 | 1,770 | 2,089 | 2,380 |
-| Child sexual abuse offences per 10,000 p | 3     | 2.54  | 2.22  | 2.21  | 2.12  | 2.49  | 3.09  | 3.2   | 3.77  | 4.28  |
+|   | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| Child sexual abuse offences | 1,389 | 1,217 | 1,218 | 1,168 | 1,373 | 1,709 | 1,770 | 2,089 | 2,380 | 2,319 |
+| Child sexual abuse offences per 10,000 p | 2.54 | 2.22 | 2.21 | 2.12 | 2.49 | 3.09 | 3.2 | 3.77 | 4.28 | 4.14 |
 
-The Finnish child victim survey (conducted in the years 1988, 2008, 2013 and 2022) and School Health Promotion Study (SHPS, comparable question in 2019) asked ninth graders (age approx. 15) about their sexual experiences with persons at least 5 years older than them. Figure 4 examines trends in self-reported crime in relation to the crimes reported to the police. Note the different measurement units. The latest trends in both data resources have been increasing. The increase in the results of child victim survey between the years 2013 and 2022 is not statistically significant (Mielityinen et al. 2023).
+The Finnish child victim survey (CVS, conducted in the years 1988, 2008, 2013 and 2022) and School Health Promotion Study (SHPS, comparable question in 2019) asked ninth graders (age approx. 15) about their sexual experiences with persons at least 5 years older than them. Figure 4 examines trends in self-reported crime in relation to the crimes reported to the police. Note the different measurement units. The increase in the results of the child victim survey between the years 2013 and 2022 is not statistically significant [@mielityinen2023].
 
 ```{r, echo=FALSE, warning=FALSE}
 
-figure1_s <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure4")
+figure1_s <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure4")
 
 #fig22_s <- figure1_s %>%
 #ggplot(aes(x=year)) + 
@@ -222,26 +210,32 @@ fig22_s2
 
 ```
 
-**Figure 4** Reported child sexual abuse offences per 10000 persons (SOCM) and percentage of ninth graders with sexual experiences with adults **CVS** [@fagerlund2014] ; [@finnish2019].
+```{r, echo=FALSE}
+ggplotly(fig22_s2) %>% layout(legend = list(orientation = "h", xanchor = "center", x = 0.5)) 
+```
+
+**Figure 4** Reported sexual offences against children per 10000 persons (SOCM) and percentage of ninth graders with sexual experiences with adults (CVS) [@mielityinen2023; @finnish_institute_of_health_and_welfare_sexual_2019].
 
 ## Theft
 
-Theft offences include petty theft, theft, and aggravated theft. The number of thefts reported to the police has remained relatively stable in absolute terms and per population. In 2020, the year of COVID-19 lockdowns, the number of reported theft offences were above average. Within the general theft category, aggravated theft decreased from 3,054 in 2013 to 2,177 in 2022.
+Theft offences include petty theft, theft, and aggravated theft. The number of thefts reported to the police has remained relatively stable in absolute terms and per population. In 2020, the year of COVID-19 lockdowns, the number of reported theft offences was above average. Within the general theft category, aggravated theft decreased from 3682 in 2013 to 2031 in 2023.
 
-|                                       | 2013    | 2014    | 2015    | 2016    | 2017    | 2018   | 2019    | 2020    | 2021    | 2022    |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Reported theft offences               | 141,395 | 143,141 | 138,571 | 131,432 | 125,431 | 122741 | 126,906 | 139,121 | 127,791 | 128,250 |
-| Reported theft offences per 1,000 pop | 25.9    | 26.2    | 25.3    | 23.9    | 22.8    | 22.2   | 23      | 25.1    | 23      | 23,1    |
+**Table 5** Theft offences reported to the police, Finland 2014-2023 (SOCM)
 
-The Finnish Crime Victim Survey captures the percentage of persons whose personal property was stolen outside the home (Figure 5). This type of victimisation decreased during the last decade. The same decreasing trend can also be seen in vehicle theft, as captured by the FCVS.
+|   | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| Reported theft offences | 143,141 | 138,571 | 131,432 | 125,431 | 122,741 | 126,906 | 139,121 | 127,791 | 128,250 | 130,018 |
+| Reported theft offences per 1,000 pop | 26.2 | 25.3 | 23.9 | 22.8 | 22.2 | 23 | 25.1 | 23 | 23,1 | 23.2 |
+
+The *Finnish Crime Victim Survey* captures the percentage of persons whose personal property was stolen outside the home (Figure 5). This type of victimisation decreased over the last decade, with the most recent measurement years showing a divergence from the trend. The decreasing trend can also be seen in vehicle theft, as captured by the FCVS (not shown).
 
 ```{r, echo=FALSE}
 
-figure1_th <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure5")
+figure1_th <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure5")
 
 figure2_th <- figure1_th %>% 
   pivot_longer(
-    cols = "2013":"2021", 
+    cols = "2013":"2023", 
     names_to = "year", 
     values_to =  "rate", 
   )
@@ -264,15 +258,15 @@ ggplotly(figure22_th) %>% layout(legend = list(orientation = "h", xanchor = "cen
 
 **Figure 5** Theft of personal property outside home, per cent of the 15--74-year-old population (FCVS), contrasted with reported theft offences per 100 per-sons (SOCM).
 
-The declining trend of theft against persons and households reflects a drop in the theft of vehicles and other physical property. Identity theft and consumer fraud have increased during the last decade, as observed in both administrative statistics and the FCVS survey system (Figure 6).
+The declining trend of theft against persons and households reflects a drop in the theft of vehicles and other physical property. In contrast, identity theft and consumer fraud have increased over the last decade, as observed in both administrative statistics and the FCVS survey system (Figure 6).
 
 ```{r, echo=FALSE}
 
-figure1_the <- read_excel("C:/Users/beuker/RTkatsaus/data_eng.xlsx",sheet="figure6")
+figure1_the <- read_excel("C:/LocalData/ikolttol/RTkatsaus_eng/data_eng.xlsx",sheet="figure6")
 
 figure2_the <- figure1_the %>% 
   pivot_longer(
-    cols = "2013":"2021", 
+    cols = "2013":"2023", 
     names_to = "year", 
     values_to =  "rate", 
   )
@@ -293,17 +287,21 @@ ggplotly(figure22_the) %>% layout(legend = list(orientation = "h", xanchor = "ce
 
 ```
 
-It should be noted that theft offences reported to the police include crimes against businesses and institutions, a quantitatively major crime target. According to the Finnish Crimes against Businesses Survey, theft victimisation against the retail sector remained stable between 2010 and 2018, with some increase in offences committed by unknown persons [@saarikkomäki2019] . Based on this, it seems that the decreasing trend in theft has benefitted private persons and households more than the businesses in the retail sector.
+**Figure 6** Consumer fraud (FCVS) and identity theft (FCVS), % of the 15–74-year-old population, contrasted with reported fraud offences per 1000 persons (SOCM).
+
+It should be noted that theft offences reported to the police include crimes against businesses and institutions, a quantitatively major crime target. According to the Finnish Crimes against Businesses Survey (FCBS), theft against the retail sector remained stable between 2010 and 2018, with some increase in offences committed by unknown persons [@saarikkomäki2019]. Based on this information, it seems that the decreasing trend in theft has benefitted private persons and households more than businesses in the retail sector.
 
 ## Economic crime
 
-Economic crime covers in this instance tax offences, accounting offences and bankruptcy offences. The number of police-recorded economic crimes has decreased considerably from 2019, which marked the highest total numbers of economic crimes in ten years. In 2022, police registered 2,822 tax offences, accounting offences and bankruptcy offences. This means the number of economic offences decreased by 16 per cent from the previous year.
+Economic crime covers in this instance tax offences, accounting offences, and bankruptcy offences. The number of police-recorded economic crimes has decreased since 2019, which marked the highest total numbers of economic crimes in ten years. In 2023, police registered 3,206 tax offences, accounting offences, and bankruptcy offences. This means that the number of economic offences increased by 14 per cent from the previous year.
 
-|                                      | 2013  | 2014  | 2015  | 2016  | 2017  | 2018  | 2019  | 2020  | 2021  | 2022  |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| Economic offences                    | 2,281 | 2,666 | 2,685 | 2,954 | 3,129 | 3,159 | 3,383 | 2,983 | 2,440 | 2,822 |
-| Economic offences per 10 000 persons | 4.18  | 4.87  | 4.89  | 5.37  | 5.68  | 5.72  | 6.12  | 5.39  | 4.40  | 5,07  |
+**Table 6** Reported economic offences, Finland 2013-2023 (SOCM)
 
-Before the decrease in reported economic offences, the number of offences had risen continuously since 2010. The decrease from the peak of 2019 has mostly been due to the decrease of tax offences, just as the increase in 2010--2019 was due to the rising numbers of tax offences. Accounting of-fences and bankruptcy offences have remained fairly stable. The observed decrease in tax offences has likely been caused by the changing emphasis in resource allocation within the field of investigation of economic offences and risk-based tax audits.
+|   | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+|----|----|----|----|----|----|----|----|----|----|----|
+| Economic offences | 2,666 | 2,685 | 2,954 | 3,129 | 3,159 | 3,383 | 2,983 | 2,440 | 2,822 | 3,206 |
+| Economic offences per 10 000 persons | 4.87 | 4.89 | 5.37 | 5.68 | 5.72 | 6.12 | 5.39 | 4.40 | 5,07 | 5.72 |
 
-As regards economic crime, no survey-based data are available to complement the above trend descriptions based on police statistics. In the 2018 Crimes against Businesses Survey (FCBS), the firms were asked to report if their competitors had used illegal means in business activities in relation to employees, such as illegal working conditions and terms. In the hotel and restaurant sector, eight per cent of the firms had perceived such illegal competition, whereas the same percentage in retail sector was 2 per cent [@saarikkomäki2019]. However, the trend remains unspecified as there has not been repeated survey after 2018.
+Before the recent decrease in reported economic offences, the number of offences had risen continuously since 2010. The decrease from the peak of 2019 has mostly been due to a decrease in tax offences, just as the increase in 2010-2019 was due to rising numbers of tax offences. Accounting offences and bankruptcy offences have remained fairly stable. The observed decrease in tax offences has likely been caused by the changing emphasis in resource allocation within the field of investigation of economic offences and risk-based tax audits.
+
+With regard to economic crime, no survey-based data are available to complement the above trend descriptions based on police statistics. In the 2018 Crimes against Businesses Survey (FCBS), firms were asked to report if their competitors had used illegal means in business activities in relation to employees, such as illegal working conditions and terms. In the hotel and restaurant sector, eight per cent of the firms had perceived such illegal competition, whereas the same percentage in the retail sector was 2 per cent [@saarikkomäki2019]. However, the trend remains unspecified as there has not been a repeated survey after 2018.
