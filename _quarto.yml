@@ -9,7 +9,7 @@ book:
   site-url: https://krimo-rt.github.io/crime-trends-in-finland/
   chapters:
     - index.qmd
-    - Crime indicators.qmd
+    - introduction.qmd
     - crime trends.qmd
     - youth crime.qmd
     - alcohol.qmd

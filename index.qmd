@@ -50,21 +50,3 @@ library(janitor)
 library(bslib)
 
 ```
-
-Unless otherwise mentioned, the trends in this report refer to the decade 2012--2023. This report emphasises findings on homicide, and findings cross-validated by administrative statistics and KRIMO crime surveys.
-
-# Introduction
-
-Since 1975, the Institute of Criminology and Legal Policy, University of Helsinki (KRIMO) has published an annual overview of crime trends in Finland. The report is published in Finnish [@kolttola2024]. To make the basic findings available for wider audiences, this short report summarises key findings in English.
-
-A characteristic feature of KRIMO’s crime monitoring activities has been the parallel use of (a) administrative statistics of recorded crimes and (b) survey-based indicators of crime. Survey-based crime measurement started in the early 1960s and has continued, often in international survey contexts [@kivivuori_discovery_2011]. The purpose of the surveys was originally to “correct” presumed biases in official crime statistics. However, it is increasingly recognised that administrative statistics and surveys are mutually supplementary measures that capture different ends of the crime continuum. As is reported in this summary, there are also indications that after a major period of rise during the late 20^th^ century, the propensity of people to report offences to the police has stabilised. This would increase the trend validity of official crime statistics.
-
-Following the longstanding principle of combined use of official records and population surveys, this report focuses on homicide and on crime types whose trends can be cross-validated by both data sources. The final part (section 7) of the report provides an overview of crime prevention methods applied in Finland. This part of the report draws on the crime prevention research database FINPREV and on a recent systematic review of Nordic studies relevant for social policy-based prevention [@beuker2024] and [@beuker_what_2024] [@suonpää2023] . The focus is on methods whose preventive effect has research-based support\[[1](#_ftn1)\].
-
-[\[1\]](#_ftnref1) Research summarised in this report has received funding from the Strategic Research Council established within the Research Council of Finland, grant numbers 352600 and 352601.
-
-# Finland
-
-Situated in northern Europe, Finland has a population of 5.6 million (2024). In terms of socio-political institutions, Finland belongs to a group of Nordic welfare states with Sweden, Denmark, Norway, and Iceland. It has a compulsory and free-of-charge school system, connecting all youths to educational institutions up to the age of 18. In the UN Human Development Index, Finland ranks 11^th^ among 193 ranked nations, belonging to the category of “very high human development” [@breaking2024].
-
-With regard to its criminal justice system, Finland represents a culture of penal moderation, with policy emphasis on prevention and rehabilitation. The Finnish prisoner rate of 52 per 100 000 population rate is one of the lowest in Europe and the world. Over the last decade, the Finnish prisoner rate has decreased. In the European comparison, Finland belongs to the cluster of countries with a “very low” prisoner rate, defined by having a 25 % lower rate than the European median value [@aebi2024].
